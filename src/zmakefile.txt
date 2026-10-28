@@ -1,0 +1,33 @@
+@ZMAKEFILE
+
+>::LOAD! #REQUIREMENTS
+requirements.txt
+
+>::LOAD! #README
+readme.txt
+
+>::LOAD! #STYLE_TEMPLATES_DOC
+globals/style_templates_doc.txt
+
+
+
+>:://======================================================
+>:://== ANALOG PHOTO ======================================
+>:://======================================================
+
+>::SET #WORKFLOW_NAME
+Analog Photo
+
+>::SET #WORKFLOW_DESCRIPTION
+This is an experimental workflow for generating images that resemble analog film photography.
+
+>::LOAD #STYLE_TEMPLATES
+ZImageTotalFun__analog.sty.txt
+
+>::ADJUST_NODE "Z-Image Total Fun*"
+seed  = 1
+style = Lomography Spirit
+
+>::MAKE
+{#PWD}/MagicPhoto.json : baseworkflow.json
+
