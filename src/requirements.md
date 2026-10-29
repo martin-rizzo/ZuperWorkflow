@@ -1,7 +1,7 @@
 ## Software Requirements
 
 * __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher
-* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1.1 or higher
+* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1 or higher
 * __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)
 
 ## Model Requirements

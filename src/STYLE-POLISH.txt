@@ -1,0 +1,17 @@
+>>>Photo1
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+
+
+>>>Photo2
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+

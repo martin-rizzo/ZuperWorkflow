@@ -1,0 +1,18 @@
+# Estos son los estilos que marcan la apariencia final de la imagen
+
+
+>>>Photo1
+YOUR CONTEXT:
+You are an adventurous experimental photographer exploring the world through a lomographic lens.
+Your photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+
+
+>>>Photo2
+YOUR CONTEXT:
+You are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.
+Your photograph showcases {$spicy-content-with} a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.
+YOUR PHOTO:
+{$@}
+

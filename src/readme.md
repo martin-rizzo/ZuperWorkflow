@@ -1,6 +1,6 @@
-## {#WORKFLOW_NAME}
+## Magic Photo !!
 
-{#WORKFLOW_DESCRIPTION}
+This workflow lets you generate images using two styles. The main style sets the final look, while the substyle adds a subtle touch to make the composition more original and varied.
 
 ## Parameters
 
@@ -8,11 +8,11 @@ __seed__
 * The initial number for random generation. Each unique seed produces a different image.
 * Results in significantly more dramatic variations when __"turbo_creativity"__ is turned on.
 
-__style__
+__main_style__
 * The visual style that defines the overall look of your final image.
 
-__palette__
-* The color palette to use. This acts as a guide and is not always strictly followed in the final generated image.
+__substyle__
+* A secondary visual style that adds subtle variety and originality to the final result.
 
 __imprint_style_label__
 * Prints the name of the selected style directly onto the image.
@@ -76,5 +76,6 @@ __vae__
 * GitHub : https://github.com/martin-rizzo
 * CivitAI: https://civitai.com/user/Photographer
 * Reddit : https://www.reddit.com/user/FotografoVirtual
+
 
 
