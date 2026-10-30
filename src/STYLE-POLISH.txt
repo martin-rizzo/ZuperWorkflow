@@ -8,10 +8,17 @@ A studio photograph of a casual, spontaneous scene. A wide-angle shot that revea
 
 
 >>>Photo2
+A magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.
+The cover contains: {$@}
+
+
+
+>>> Hand-Painted Miniature
 YOUR CONTEXT:
-You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
-Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
-Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
-YOUR PHOTO:
-A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+Your photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details. The colors are vibrant and high-quality, with natural skin tones.
+Your photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.
+YOUR PHOTOGRAPH:
+<!--
+{$@}
+-->
 

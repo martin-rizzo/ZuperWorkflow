@@ -1,8 +1,8 @@
 {
-  "id": "b8c46006-381e-421e-b053-0668b2e3a56f",
+  "id": "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f",
   "revision": 0,
-  "last_node_id": 73,
-  "last_link_id": 135,
+  "last_node_id": 76,
+  "last_link_id": 140,
   "nodes": [
     {
       "id": 22,
@@ -54,7 +54,7 @@
       "mode": 0,
       "inputs": [
         {
-          "label": "main_style",
+          "label": "style",
           "name": "style_1",
           "type": "ZIPN_STYLE",
           "widget": {
@@ -63,26 +63,11 @@
           "link": null
         },
         {
-          "label": "substyle",
-          "name": "style",
-          "type": "ZIPN_STYLE",
-          "link": null
-        },
-        {
-          "label": "imprint_style_label",
-          "name": "enable_label",
-          "type": "BOOLEAN",
+          "label": "noise_shift",
+          "name": "initial_bias",
+          "type": "FLOAT",
           "widget": {
-            "name": "enable_label"
-          },
-          "link": null
-        },
-        {
-          "label": "detailed_sampling",
-          "name": "detailed_refiner",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "detailed_refiner"
+            "name": "initial_bias"
           },
           "link": null
         },
@@ -114,6 +99,15 @@
           "link": null
         },
         {
+          "label": "detailed_sampling",
+          "name": "detailed_refiner",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "detailed_refiner"
+          },
+          "link": null
+        },
+        {
           "label": "aspect_ratio",
           "name": "ratio",
           "type": "COMBO",
@@ -132,7 +126,7 @@
           "link": null
         },
         {
-          "label": "zimage_turbo_ckpt",
+          "label": "zimage_turbo_file",
           "name": "checkpoint",
           "type": "COMBO",
           "widget": {
@@ -141,7 +135,7 @@
           "link": null
         },
         {
-          "label": "qwen3_4b_ckpt",
+          "label": "qwen3_4b_file",
           "name": "checkpoint_1",
           "type": "COMBO",
           "widget": {
@@ -150,11 +144,20 @@
           "link": null
         },
         {
-          "label": "vae",
+          "label": "vae_file",
           "name": "vae_name",
           "type": "COMBO",
           "widget": {
             "name": "vae_name"
+          },
+          "link": null
+        },
+        {
+          "label": "imprint_style_label",
+          "name": "enable_label",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "enable_label"
           },
           "link": null
         }
@@ -168,46 +171,47 @@
           ]
         }
       ],
+      "title": "{#WORKFLOW_NAME}",
       "properties": {
         "previewExposures": []
       },
       "widgets_values": [
         4,
         "Photo2",
-        false,
         "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
         8,
-        0,
-        true,
+        -2.7755575615628914e-17,
         true,
         0.20000000000000004,
         0.20000000000000004,
         -0.20000000000000004,
+        true,
         false,
         "3:2  (photo)",
         true,
         "z_image_turbo_int8_convrot_bf16emixed.safetensors",
         "qwen3-4b_int8_convrot_fp16emixed.safetensors",
-        "Z-Image_half_natural_vae.safetensors"
+        "Z-Image_half_natural_vae.safetensors",
+        false
       ],
       "widgets_values_named": {
         "seed": 4,
         "style_1": "Photo2",
-        "enable_label": false,
         "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
         "steps": 8,
-        "initial_bias": 0,
+        "initial_bias": -2.7755575615628914e-17,
         "turbo_creativity": true,
-        "detailed_refiner": true,
         "effect_1_tweak": 0.20000000000000004,
         "effect_2_tweak": 0.20000000000000004,
         "effect_3_tweak": -0.20000000000000004,
+        "detailed_refiner": true,
         "orientation": false,
         "ratio": "3:2  (photo)",
         "comfy_kitchen_attention": true,
         "checkpoint": "z_image_turbo_int8_convrot_bf16emixed.safetensors",
         "checkpoint_1": "qwen3-4b_int8_convrot_fp16emixed.safetensors",
-        "vae_name": "Z-Image_half_natural_vae.safetensors"
+        "vae_name": "Z-Image_half_natural_vae.safetensors",
+        "enable_label": false
       }
     },
     {
@@ -231,10 +235,10 @@
       "title": "Requirements",
       "properties": {},
       "widgets_values": [
-        "## Software Requirements\n\n* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher\n* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1 or higher\n* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)\n\n## Model Requirements\n\n**diffusion_models**\n\n- __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]\n\n**text_encoders**\n\n- __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]\n\n**vae**\n\n- __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   │\n│   └── 📂 diffusion_models/\n│   │   └── z_image_turbo_int8_convrot_bf16emixed.safetensors\n│   │\n│   ├── 📂 text_encoders/\n│   │   └── qwen3-4b_int8_convrot_fp16emixed.safetensors\n│   │\n│   ├── 📂 vae/\n│   │   └── Z-Image_half_natural_vae.safetensors\n```\n\nPlease ensure you update ComfyUI first and have the latest version of the Z-Image Power Nodes installed.\n\n## Alternative Checkpoints\n\n> The following checkpoints are provided as alternatives in case you experience issues.  \n> Due to the wide variety of GPUs, VRAM capacities, and ComfyUI versions, one of these may work better for your system.\n\n**diffusion_models**\n\n- __[z_image_turbo-Q5_K_S.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q5_K_S.gguf)__ [5.19 GB] : GGUF\n- __[z_image_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors)__ [6.20 GB] : ComfyOrg I8ConvRot\n- __[z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors)__ [12.3 GB] : ComfyOrg BF16\n\n**text_encoders**\n\n- __[Qwen3-4B-Q8_0.gguf](https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q8_0.gguf)__ [4.28 GB] : GGUF\n- __[qwen_3_4b_fp8_mixed.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors)__ [5.63 GB] : ComfyOrg FP8\n- __[qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors)__ [8.04 GB] : ComfyOrg BF16\n\n**vae**\n\n- __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors)__ [335 MB] : ComfyOrg\n- More: [Z-Image_clear_vae](https://huggingface.co/easygoing0114/Z-Image_clear_vae), [Z-Image_Anime_VAE](https://huggingface.co/Anzhc/Z-Image_Anime_VAE)\n\n"
+        "{#REQUIREMENTS}"
       ],
       "widgets_values_named": {
-        "text": "## Software Requirements\n\n* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher\n* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1 or higher\n* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)\n\n## Model Requirements\n\n**diffusion_models**\n\n- __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]\n\n**text_encoders**\n\n- __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]\n\n**vae**\n\n- __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   │\n│   └── 📂 diffusion_models/\n│   │   └── z_image_turbo_int8_convrot_bf16emixed.safetensors\n│   │\n│   ├── 📂 text_encoders/\n│   │   └── qwen3-4b_int8_convrot_fp16emixed.safetensors\n│   │\n│   ├── 📂 vae/\n│   │   └── Z-Image_half_natural_vae.safetensors\n```\n\nPlease ensure you update ComfyUI first and have the latest version of the Z-Image Power Nodes installed.\n\n## Alternative Checkpoints\n\n> The following checkpoints are provided as alternatives in case you experience issues.  \n> Due to the wide variety of GPUs, VRAM capacities, and ComfyUI versions, one of these may work better for your system.\n\n**diffusion_models**\n\n- __[z_image_turbo-Q5_K_S.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q5_K_S.gguf)__ [5.19 GB] : GGUF\n- __[z_image_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors)__ [6.20 GB] : ComfyOrg I8ConvRot\n- __[z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors)__ [12.3 GB] : ComfyOrg BF16\n\n**text_encoders**\n\n- __[Qwen3-4B-Q8_0.gguf](https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q8_0.gguf)__ [4.28 GB] : GGUF\n- __[qwen_3_4b_fp8_mixed.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors)__ [5.63 GB] : ComfyOrg FP8\n- __[qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors)__ [8.04 GB] : ComfyOrg BF16\n\n**vae**\n\n- __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors)__ [335 MB] : ComfyOrg\n- More: [Z-Image_clear_vae](https://huggingface.co/easygoing0114/Z-Image_clear_vae), [Z-Image_Anime_VAE](https://huggingface.co/Anzhc/Z-Image_Anime_VAE)\n\n"
+        "text": "{#REQUIREMENTS}"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -258,10 +262,10 @@
       "title": "README",
       "properties": {},
       "widgets_values": [
-        "## Z-Image Turbo Double Trouble Workflow\n\nThis workflow lets you generate images using two styles. The main style sets the final look, while the substyle adds a subtle touch to make the composition more original and varied.\n\n## Parameters\n\n__seed__\n* The initial number for random generation. Each unique seed produces a different image.\n* Results in significantly more dramatic variations when __\"turbo_creativity\"__ is turned on.\n\n__main_style__\n* The visual style that defines the overall look of your final image.\n\n__substyle__\n* A secondary visual style that adds subtle variety and originality to the final result.\n\n__imprint_style_label__\n* Prints the name of the selected style directly onto the image.\n* It is recommended to leave this disabled by default.\n\n__prompt__\n* The text description of what you want to see, including subjects, actions, and settings.\n* Avoid style keywords such as photo, comic, or blur, as the selected styles handle all visual effects automatically.\n\n__steps__\n* The number of iterations performed during the denoising process.\n* The optimal setting is 8 steps. Increase this value only if you require better quality or need to fix minor hallucinations caused by __\"turbo_creativity\"__, keeping in mind that higher step counts result in longer render times.\n\n__initial_bias__\n* Adjusts the starting noise deviation to correct color issues, brightness, or even weird hallucinations.\n* 0.0 serves as the optimal setting and is generally best left unchanged due to its unpredictable effects.\n\n__turbo_creativity__\n* Shakes up the generation process to produce unique, original compositions and avoid generic AI aesthetics.\n* It is prone to generating hallucinations and duplicate elements, especially in high-contrast images.\n* Disable this feature if you require highly precise and complex images.\n* Enable this feature when exploring creative compositions with substantial variations between different seeds.\n* Working with __turbo_creativity__ involves testing multiple seeds until you find the ideal one.\n* Some minor defects and small hallucinations can be corrected by tweaking __\"steps\"__ and __\"initial_bias\"__.\n* Note that seed numbers that are multiples of 3 cause __turbo_creativity__ to hallucinate more frequently, as the sampler internally skips one correction step to maximize image variation.\n\n__detailed_sampling__\n* Applies a different sampling method during the final steps to add finer details, although it may increase the generation time.\n\n__contrast__\n* Controls how smooth or intense the brightness transitions appear in the final image.\n* 0.0 serves as the neutral baseline.\n\n__color__\n* Adjusts the color saturation of the image.\n* 0.0 serves as the neutral baseline.\n\n__hue__\n* Modifies the color tint, primarily used to calibrate skin tones.\n* 0.0 serves as the neutral baseline.\n\n__orientation__\n* Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.\n\n__aspect_ratio__\n* Determines the proportional relationship between the width and height of the final image.\n\n__ck_attention__\n* Enables Comfy-Kitchen attention to reduce generation time. This takes effect only in newer versions of ComfyUI that support this optimization.\n\n__zimage_turbo_ckpt__\n* The checkpoint file used for the Z-Image Turbo diffusion model.\n\n__qwen3_4b_ckpt__\n* The checkpoint file used as text encoder, which must be based on the Qwen3-4b model.\n\n__vae__\n* The checkpoint file used for the variational autoencoder.\n\n## Created by Martin Rizzo\n* GitHub : https://github.com/martin-rizzo\n* CivitAI: https://civitai.com/user/Photographer\n* Reddit : https://www.reddit.com/user/FotografoVirtual\n\n\n"
+        "{#README}"
       ],
       "widgets_values_named": {
-        "text": "## Z-Image Turbo Double Trouble Workflow\n\nThis workflow lets you generate images using two styles. The main style sets the final look, while the substyle adds a subtle touch to make the composition more original and varied.\n\n## Parameters\n\n__seed__\n* The initial number for random generation. Each unique seed produces a different image.\n* Results in significantly more dramatic variations when __\"turbo_creativity\"__ is turned on.\n\n__main_style__\n* The visual style that defines the overall look of your final image.\n\n__substyle__\n* A secondary visual style that adds subtle variety and originality to the final result.\n\n__imprint_style_label__\n* Prints the name of the selected style directly onto the image.\n* It is recommended to leave this disabled by default.\n\n__prompt__\n* The text description of what you want to see, including subjects, actions, and settings.\n* Avoid style keywords such as photo, comic, or blur, as the selected styles handle all visual effects automatically.\n\n__steps__\n* The number of iterations performed during the denoising process.\n* The optimal setting is 8 steps. Increase this value only if you require better quality or need to fix minor hallucinations caused by __\"turbo_creativity\"__, keeping in mind that higher step counts result in longer render times.\n\n__initial_bias__\n* Adjusts the starting noise deviation to correct color issues, brightness, or even weird hallucinations.\n* 0.0 serves as the optimal setting and is generally best left unchanged due to its unpredictable effects.\n\n__turbo_creativity__\n* Shakes up the generation process to produce unique, original compositions and avoid generic AI aesthetics.\n* It is prone to generating hallucinations and duplicate elements, especially in high-contrast images.\n* Disable this feature if you require highly precise and complex images.\n* Enable this feature when exploring creative compositions with substantial variations between different seeds.\n* Working with __turbo_creativity__ involves testing multiple seeds until you find the ideal one.\n* Some minor defects and small hallucinations can be corrected by tweaking __\"steps\"__ and __\"initial_bias\"__.\n* Note that seed numbers that are multiples of 3 cause __turbo_creativity__ to hallucinate more frequently, as the sampler internally skips one correction step to maximize image variation.\n\n__detailed_sampling__\n* Applies a different sampling method during the final steps to add finer details, although it may increase the generation time.\n\n__contrast__\n* Controls how smooth or intense the brightness transitions appear in the final image.\n* 0.0 serves as the neutral baseline.\n\n__color__\n* Adjusts the color saturation of the image.\n* 0.0 serves as the neutral baseline.\n\n__hue__\n* Modifies the color tint, primarily used to calibrate skin tones.\n* 0.0 serves as the neutral baseline.\n\n__orientation__\n* Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.\n\n__aspect_ratio__\n* Determines the proportional relationship between the width and height of the final image.\n\n__ck_attention__\n* Enables Comfy-Kitchen attention to reduce generation time. This takes effect only in newer versions of ComfyUI that support this optimization.\n\n__zimage_turbo_ckpt__\n* The checkpoint file used for the Z-Image Turbo diffusion model.\n\n__qwen3_4b_ckpt__\n* The checkpoint file used as text encoder, which must be based on the Qwen3-4b model.\n\n__vae__\n* The checkpoint file used for the variational autoencoder.\n\n## Created by Martin Rizzo\n* GitHub : https://github.com/martin-rizzo\n* CivitAI: https://civitai.com/user/Photographer\n* Reddit : https://www.reddit.com/user/FotografoVirtual\n\n\n"
+        "text": "{#README}"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -284,28 +288,28 @@
         "id": "22148af9-ea62-4d0e-8039-cfdf1081fa66",
         "version": 1,
         "state": {
-          "lastGroupId": 1,
-          "lastNodeId": 73,
-          "lastLinkId": 135,
+          "lastGroupId": 2,
+          "lastNodeId": 76,
+          "lastLinkId": 140,
           "lastRerouteId": 0
         },
         "revision": 0,
         "config": {},
-        "name": "Magic Photo [Z-Image Turbo]",
+        "name": "{#WORKFLOW_NAME}",
         "inputNode": {
           "id": -10,
           "bounding": [
             -960,
             -410,
-            155.068359375,
-            408
+            152.765625,
+            388
           ]
         },
         "outputNode": {
           "id": -20,
           "bounding": [
-            2829.945557421921,
-            -203.72314324655804,
+            3043.1419201737526,
+            -183.10909791688766,
             128,
             68
           ]
@@ -319,7 +323,7 @@
               75
             ],
             "pos": [
-              -828.931640625,
+              -831.234375,
               -386
             ]
           },
@@ -329,36 +333,13 @@
             "type": "ZIPN_STYLE",
             "linkIds": [
               127,
-              128
+              128,
+              138
             ],
-            "label": "main_style",
+            "label": "style",
             "pos": [
-              -828.931640625,
+              -831.234375,
               -366
-            ]
-          },
-          {
-            "id": "98479283-f00c-45d2-8cc9-1f02a0780afe",
-            "name": "style",
-            "type": "ZIPN_STYLE",
-            "linkIds": [],
-            "label": "substyle",
-            "pos": [
-              -828.931640625,
-              -346
-            ]
-          },
-          {
-            "id": "29a97490-26df-4cdc-81b0-ed1bcd2bdd6d",
-            "name": "enable_label",
-            "type": "BOOLEAN",
-            "linkIds": [
-              121
-            ],
-            "label": "imprint_style_label",
-            "pos": [
-              -828.931640625,
-              -326
             ]
           },
           {
@@ -367,11 +348,12 @@
             "type": "STRING",
             "linkIds": [
               116,
-              117
+              117,
+              139
             ],
             "pos": [
-              -828.931640625,
-              -306
+              -831.234375,
+              -346
             ]
           },
           {
@@ -382,8 +364,8 @@
               76
             ],
             "pos": [
-              -828.931640625,
-              -286
+              -831.234375,
+              -326
             ]
           },
           {
@@ -393,9 +375,10 @@
             "linkIds": [
               77
             ],
+            "label": "noise_shift",
             "pos": [
-              -828.931640625,
-              -266
+              -831.234375,
+              -306
             ]
           },
           {
@@ -406,21 +389,8 @@
               78
             ],
             "pos": [
-              -828.931640625,
-              -246
-            ]
-          },
-          {
-            "id": "7dd7e4f9-3082-42bd-9c48-96450dbf93d9",
-            "name": "detailed_refiner",
-            "type": "BOOLEAN",
-            "linkIds": [
-              79
-            ],
-            "label": "detailed_sampling",
-            "pos": [
-              -828.931640625,
-              -226
+              -831.234375,
+              -286
             ]
           },
           {
@@ -432,8 +402,8 @@
             ],
             "label": "contrast",
             "pos": [
-              -828.931640625,
-              -206
+              -831.234375,
+              -266
             ]
           },
           {
@@ -445,8 +415,8 @@
             ],
             "label": "color",
             "pos": [
-              -828.931640625,
-              -186
+              -831.234375,
+              -246
             ]
           },
           {
@@ -458,8 +428,21 @@
             ],
             "label": "hue",
             "pos": [
-              -828.931640625,
-              -166
+              -831.234375,
+              -226
+            ]
+          },
+          {
+            "id": "7dd7e4f9-3082-42bd-9c48-96450dbf93d9",
+            "name": "detailed_refiner",
+            "type": "BOOLEAN",
+            "linkIds": [
+              79
+            ],
+            "label": "detailed_sampling",
+            "pos": [
+              -831.234375,
+              -206
             ]
           },
           {
@@ -470,8 +453,8 @@
               35
             ],
             "pos": [
-              -828.931640625,
-              -146
+              -831.234375,
+              -186
             ]
           },
           {
@@ -483,8 +466,8 @@
             ],
             "label": "aspect_ratio",
             "pos": [
-              -828.931640625,
-              -126
+              -831.234375,
+              -166
             ]
           },
           {
@@ -496,8 +479,8 @@
             ],
             "label": "ck_attention",
             "pos": [
-              -828.931640625,
-              -106
+              -831.234375,
+              -146
             ]
           },
           {
@@ -507,10 +490,10 @@
             "linkIds": [
               52
             ],
-            "label": "zimage_turbo_ckpt",
+            "label": "zimage_turbo_file",
             "pos": [
-              -828.931640625,
-              -86
+              -831.234375,
+              -126
             ]
           },
           {
@@ -520,10 +503,10 @@
             "linkIds": [
               53
             ],
-            "label": "qwen3_4b_ckpt",
+            "label": "qwen3_4b_file",
             "pos": [
-              -828.931640625,
-              -66
+              -831.234375,
+              -106
             ]
           },
           {
@@ -533,10 +516,23 @@
             "linkIds": [
               54
             ],
-            "label": "vae",
+            "label": "vae_file",
             "pos": [
-              -828.931640625,
-              -46
+              -831.234375,
+              -86
+            ]
+          },
+          {
+            "id": "29a97490-26df-4cdc-81b0-ed1bcd2bdd6d",
+            "name": "enable_label",
+            "type": "BOOLEAN",
+            "linkIds": [
+              121
+            ],
+            "label": "imprint_style_label",
+            "pos": [
+              -831.234375,
+              -66
             ]
           }
         ],
@@ -549,8 +545,8 @@
               32
             ],
             "pos": [
-              2853.945557421921,
-              -179.72314324655804
+              3067.1419201737526,
+              -159.10909791688766
             ]
           }
         ],
@@ -568,7 +564,7 @@
               140
             ],
             "flags": {},
-            "order": 4,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -616,7 +612,7 @@
               160
             ],
             "flags": {},
-            "order": 3,
+            "order": 4,
             "mode": 0,
             "inputs": [
               {
@@ -666,7 +662,7 @@
               170
             ],
             "flags": {},
-            "order": 2,
+            "order": 3,
             "mode": 0,
             "inputs": [
               {
@@ -718,7 +714,7 @@
               100
             ],
             "flags": {},
-            "order": 7,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -769,7 +765,7 @@
               200
             ],
             "flags": {},
-            "order": 5,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -821,15 +817,15 @@
             "id": 9,
             "type": "AdvancedVAEDecoderX21 //ZImagePowerNodes",
             "pos": [
-              1750,
-              -190
+              1960,
+              -170
             ],
             "size": [
               340,
               140
             ],
             "flags": {},
-            "order": 6,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -871,15 +867,15 @@
             "id": 19,
             "type": "ImageLabeler2 //ZImagePowerNodes",
             "pos": [
-              2440,
-              -190
+              2650,
+              -170
             ],
             "size": [
               270,
               440
             ],
             "flags": {},
-            "order": 8,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -967,7 +963,7 @@
               26
             ],
             "flags": {},
-            "order": 9,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -994,15 +990,15 @@
             "id": 24,
             "type": "Reroute",
             "pos": [
-              1460,
-              800
+              1670,
+              820
             ],
             "size": [
               75,
               26
             ],
             "flags": {},
-            "order": 10,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -1029,15 +1025,15 @@
             "id": 27,
             "type": "ZSamplerTurboX21 //ZImagePowerNodes",
             "pos": [
-              1210,
-              -530
+              1240,
+              -520
             ],
             "size": [
               370,
               720
             ],
             "flags": {},
-            "order": 11,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -1070,7 +1066,7 @@
                 "name": "positive_stg3",
                 "shape": 7,
                 "type": "CONDITIONING",
-                "link": 109
+                "link": 140
               },
               {
                 "localized_name": "seed",
@@ -1174,7 +1170,7 @@
               26
             ],
             "flags": {},
-            "order": 12,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -1189,7 +1185,8 @@
                 "type": "CLIP",
                 "links": [
                   105,
-                  106
+                  106,
+                  137
                 ]
               }
             ],
@@ -1202,15 +1199,15 @@
             "id": 54,
             "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
             "pos": [
-              690,
-              150
+              710,
+              480
             ],
             "size": [
-              430,
+              440,
               270
             ],
             "flags": {},
-            "order": 13,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
@@ -1288,6 +1285,7 @@
                 "links": null
               }
             ],
+            "title": "⚗️🔬| STYLE-LAYOUT + Prompt Encoder ^X2.2 (Advanced)",
             "properties": {
               "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
             },
@@ -1306,15 +1304,15 @@
             "id": 61,
             "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
             "pos": [
-              720,
-              500
+              710,
+              160
             ],
             "size": [
-              430,
+              440,
               270
             ],
             "flags": {},
-            "order": 14,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -1371,8 +1369,7 @@
                 "name": "CONDITIONING",
                 "type": "CONDITIONING",
                 "links": [
-                  108,
-                  109
+                  108
                 ]
               },
               {
@@ -1404,6 +1401,7 @@
                 "links": null
               }
             ],
+            "title": "⚗️🔬| STYLE-CORE + Prompt Encoder ^X2.2 (Advanced)",
             "properties": {
               "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
             },
@@ -1422,12 +1420,12 @@
             "id": 69,
             "type": "PrimitiveStringMultiline",
             "pos": [
-              100,
-              860
+              -300,
+              1060
             ],
             "size": [
-              520,
-              640
+              820,
+              1060
             ],
             "flags": {},
             "order": 0,
@@ -1443,26 +1441,29 @@
                 ]
               }
             ],
+            "title": "STYLE-CORE [stage2]",
             "properties": {
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              ">>>Photo1\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>>Photo2\nYOUR CONTEXT:\nYou are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.\nYour photograph showcases {$spicy-content-with} a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.\nYOUR PHOTO:\n{$@}\n"
+              "{#STYLE-CORE}"
             ],
             "widgets_values_named": {
-              "value": ">>>Photo1\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>>Photo2\nYOUR CONTEXT:\nYou are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.\nYour photograph showcases {$spicy-content-with} a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.\nYOUR PHOTO:\n{$@}\n"
-            }
+              "value": "{#STYLE-CORE}"
+            },
+            "color": "#432",
+            "bgcolor": "#653"
           },
           {
             "id": 70,
             "type": "PrimitiveStringMultiline",
             "pos": [
-              650,
-              870
+              530,
+              1060
             ],
             "size": [
-              720,
-              590
+              820,
+              1060
             ],
             "flags": {},
             "order": 1,
@@ -1478,29 +1479,32 @@
                 ]
               }
             ],
+            "title": "STYLE-LAYOUT [stage1]",
             "properties": {
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              ">>>Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>>Photo2\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n"
+              "{#STYLE-LAYOUT}"
             ],
             "widgets_values_named": {
-              "value": ">>>Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>>Photo2\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n"
-            }
+              "value": "{#STYLE-LAYOUT}"
+            },
+            "color": "#432",
+            "bgcolor": "#653"
           },
           {
             "id": 71,
             "type": "PreviewAny",
             "pos": [
-              1740,
-              370
+              2440,
+              830
             ],
             "size": [
-              440,
+              940,
               390
             ],
             "flags": {},
-            "order": 15,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -1518,6 +1522,7 @@
                 "links": null
               }
             ],
+            "title": "Preview LAYOUT prompt",
             "properties": {
               "Node name for S&R": "PreviewAny"
             },
@@ -1528,15 +1533,15 @@
             "id": 72,
             "type": "PreviewAny",
             "pos": [
-              1760,
-              810
+              2440,
+              400
             ],
             "size": [
-              440,
+              940,
               390
             ],
             "flags": {},
-            "order": 16,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -1554,6 +1559,7 @@
                 "links": null
               }
             ],
+            "title": "Preview CORE prompt",
             "properties": {
               "Node name for S&R": "PreviewAny"
             },
@@ -1564,15 +1570,15 @@
             "id": 73,
             "type": "ImageFilter //ZImagePowerNodes",
             "pos": [
-              2120,
-              -190
+              2330,
+              -170
             ],
             "size": [
               290,
               370
             ],
             "flags": {},
-            "order": 17,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -1629,10 +1635,10 @@
               "zgamma",
               0,
               null,
-              "none",
+              "color_pop",
               0,
               null,
-              "none",
+              "color_twist",
               0
             ],
             "widgets_values_named": {
@@ -1642,12 +1648,153 @@
               "effect_1": "zgamma",
               "effect_1_tweak": 0,
               "divider2": null,
-              "effect_2": "none",
+              "effect_2": "color_pop",
               "effect_2_tweak": 0,
               "divider3": null,
-              "effect_3": "none",
+              "effect_3": "color_twist",
               "effect_3_tweak": 0
             }
+          },
+          {
+            "id": 74,
+            "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
+            "pos": [
+              1170,
+              480
+            ],
+            "size": [
+              440,
+              270
+            ],
+            "flags": {},
+            "order": 19,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 137
+              },
+              {
+                "localized_name": "user_styles",
+                "name": "user_styles",
+                "shape": 7,
+                "type": "STRING",
+                "link": 136
+              },
+              {
+                "localized_name": "user_palettes",
+                "name": "user_palettes",
+                "shape": 7,
+                "type": "STRING",
+                "link": null
+              },
+              {
+                "localized_name": "style",
+                "name": "style",
+                "type": "ZIPN_STYLE",
+                "widget": {
+                  "name": "style"
+                },
+                "link": 138
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 139
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  140
+                ]
+              },
+              {
+                "localized_name": "PROMPT",
+                "name": "PROMPT",
+                "type": "STRING",
+                "links": []
+              },
+              {
+                "localized_name": "style_name",
+                "name": "style_name",
+                "type": "STRING",
+                "links": []
+              },
+              {
+                "localized_name": "palette_name",
+                "name": "palette_name",
+                "type": "STRING",
+                "links": null
+              },
+              {
+                "localized_name": "original_prompt",
+                "name": "original_prompt",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "⚗️🔬| STYLE-POLISH + Prompt Encoder ^X2.2 (Advanced)",
+            "properties": {
+              "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
+            },
+            "widgets_values": [
+              "none",
+              "none",
+              ""
+            ],
+            "widgets_values_named": {
+              "style": "none",
+              "palette": "none",
+              "prompt": ""
+            }
+          },
+          {
+            "id": 75,
+            "type": "PrimitiveStringMultiline",
+            "pos": [
+              1360,
+              1060
+            ],
+            "size": [
+              820,
+              1060
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+              {
+                "localized_name": "STRING",
+                "name": "STRING",
+                "type": "STRING",
+                "links": [
+                  136
+                ]
+              }
+            ],
+            "title": "STYLE-POLISH [stage3]",
+            "properties": {
+              "Node name for S&R": "PrimitiveStringMultiline"
+            },
+            "widgets_values": [
+              "{#STYLE-POLISH}"
+            ],
+            "widgets_values_named": {
+              "value": "{#STYLE-POLISH}"
+            },
+            "color": "#432",
+            "bgcolor": "#653"
           }
         ],
         "groups": [
@@ -1659,6 +1806,18 @@
               160,
               610,
               650
+            ],
+            "color": "#3f789e",
+            "flags": {}
+          },
+          {
+            "id": 2,
+            "title": "Styles *3",
+            "bounding": [
+              -320,
+              970,
+              2530,
+              1180
             ],
             "color": "#3f789e",
             "flags": {}
@@ -1680,22 +1839,6 @@
             "target_id": -20,
             "target_slot": 0,
             "type": "IMAGE"
-          },
-          {
-            "id": 35,
-            "origin_id": -10,
-            "origin_slot": 12,
-            "target_id": 7,
-            "target_slot": 0,
-            "type": "BOOLEAN"
-          },
-          {
-            "id": 36,
-            "origin_id": -10,
-            "origin_slot": 13,
-            "target_id": 7,
-            "target_slot": 1,
-            "type": "COMBO"
           },
           {
             "id": 49,
@@ -1720,38 +1863,6 @@
             "target_id": 9,
             "target_slot": 1,
             "type": "VAE"
-          },
-          {
-            "id": 52,
-            "origin_id": -10,
-            "origin_slot": 15,
-            "target_id": 2,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 53,
-            "origin_id": -10,
-            "origin_slot": 16,
-            "target_id": 1,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 54,
-            "origin_id": -10,
-            "origin_slot": 17,
-            "target_id": 3,
-            "target_slot": 0,
-            "type": "COMBO"
-          },
-          {
-            "id": 55,
-            "origin_id": -10,
-            "origin_slot": 14,
-            "target_id": 18,
-            "target_slot": 1,
-            "type": "BOOLEAN"
           },
           {
             "id": 66,
@@ -1786,46 +1897,6 @@
             "type": "MODEL"
           },
           {
-            "id": 75,
-            "origin_id": -10,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 5,
-            "type": "INT"
-          },
-          {
-            "id": 76,
-            "origin_id": -10,
-            "origin_slot": 5,
-            "target_id": 27,
-            "target_slot": 6,
-            "type": "INT"
-          },
-          {
-            "id": 77,
-            "origin_id": -10,
-            "origin_slot": 6,
-            "target_id": 27,
-            "target_slot": 7,
-            "type": "FLOAT"
-          },
-          {
-            "id": 78,
-            "origin_id": -10,
-            "origin_slot": 7,
-            "target_id": 27,
-            "target_slot": 8,
-            "type": "BOOLEAN"
-          },
-          {
-            "id": 79,
-            "origin_id": -10,
-            "origin_slot": 8,
-            "target_id": 27,
-            "target_slot": 9,
-            "type": "BOOLEAN"
-          },
-          {
             "id": 105,
             "origin_id": 37,
             "origin_slot": 0,
@@ -1858,14 +1929,6 @@
             "type": "CONDITIONING"
           },
           {
-            "id": 109,
-            "origin_id": 61,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 4,
-            "type": "CONDITIONING"
-          },
-          {
             "id": 115,
             "origin_id": -10,
             "origin_slot": 3,
@@ -1874,36 +1937,12 @@
             "type": "ZIPN_PALETTE"
           },
           {
-            "id": 116,
-            "origin_id": -10,
-            "origin_slot": 4,
-            "target_id": 54,
-            "target_slot": 4,
-            "type": "STRING"
-          },
-          {
-            "id": 117,
-            "origin_id": -10,
-            "origin_slot": 4,
-            "target_id": 61,
-            "target_slot": 5,
-            "type": "STRING"
-          },
-          {
             "id": 120,
             "origin_id": 61,
             "origin_slot": 2,
             "target_id": 19,
             "target_slot": 2,
             "type": "STRING"
-          },
-          {
-            "id": 121,
-            "origin_id": -10,
-            "origin_slot": 3,
-            "target_id": 19,
-            "target_slot": 1,
-            "type": "BOOLEAN"
           },
           {
             "id": 124,
@@ -1920,22 +1959,6 @@
             "target_id": 61,
             "target_slot": 1,
             "type": "STRING"
-          },
-          {
-            "id": 127,
-            "origin_id": -10,
-            "origin_slot": 1,
-            "target_id": 54,
-            "target_slot": 3,
-            "type": "ZIPN_STYLE"
-          },
-          {
-            "id": 128,
-            "origin_id": -10,
-            "origin_slot": 1,
-            "target_id": 61,
-            "target_slot": 3,
-            "type": "ZIPN_STYLE"
           },
           {
             "id": 129,
@@ -1970,9 +1993,113 @@
             "type": "IMAGE"
           },
           {
+            "id": 136,
+            "origin_id": 75,
+            "origin_slot": 0,
+            "target_id": 74,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 137,
+            "origin_id": 37,
+            "origin_slot": 0,
+            "target_id": 74,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 140,
+            "origin_id": 74,
+            "origin_slot": 0,
+            "target_id": 27,
+            "target_slot": 4,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 75,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 27,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 127,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 54,
+            "target_slot": 3,
+            "type": "ZIPN_STYLE"
+          },
+          {
+            "id": 128,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 61,
+            "target_slot": 3,
+            "type": "ZIPN_STYLE"
+          },
+          {
+            "id": 138,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 74,
+            "target_slot": 3,
+            "type": "ZIPN_STYLE"
+          },
+          {
+            "id": 116,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 54,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 117,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 61,
+            "target_slot": 5,
+            "type": "STRING"
+          },
+          {
+            "id": 139,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 74,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 76,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 27,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 77,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 27,
+            "target_slot": 7,
+            "type": "FLOAT"
+          },
+          {
+            "id": 78,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 27,
+            "target_slot": 8,
+            "type": "BOOLEAN"
+          },
+          {
             "id": 133,
             "origin_id": -10,
-            "origin_slot": 9,
+            "origin_slot": 6,
             "target_id": 73,
             "target_slot": 1,
             "type": "FLOAT"
@@ -1980,7 +2107,7 @@
           {
             "id": 134,
             "origin_id": -10,
-            "origin_slot": 10,
+            "origin_slot": 7,
             "target_id": 73,
             "target_slot": 2,
             "type": "FLOAT"
@@ -1988,10 +2115,74 @@
           {
             "id": 135,
             "origin_id": -10,
-            "origin_slot": 11,
+            "origin_slot": 8,
             "target_id": 73,
             "target_slot": 3,
             "type": "FLOAT"
+          },
+          {
+            "id": 79,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 27,
+            "target_slot": 9,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 35,
+            "origin_id": -10,
+            "origin_slot": 10,
+            "target_id": 7,
+            "target_slot": 0,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 36,
+            "origin_id": -10,
+            "origin_slot": 11,
+            "target_id": 7,
+            "target_slot": 1,
+            "type": "COMBO"
+          },
+          {
+            "id": 55,
+            "origin_id": -10,
+            "origin_slot": 12,
+            "target_id": 18,
+            "target_slot": 1,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 52,
+            "origin_id": -10,
+            "origin_slot": 13,
+            "target_id": 2,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 53,
+            "origin_id": -10,
+            "origin_slot": 14,
+            "target_id": 1,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 54,
+            "origin_id": -10,
+            "origin_slot": 15,
+            "target_id": 3,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 121,
+            "origin_id": -10,
+            "origin_slot": 16,
+            "target_id": 19,
+            "target_slot": 1,
+            "type": "BOOLEAN"
           }
         ],
         "extra": {}
@@ -2000,15 +2191,15 @@
   },
   "config": {},
   "extra": {
-    "frontendVersion": "1.52.7",
+    "frontendVersion": "1.57.4",
     "favoritedWidgets": {
       "favorites": []
     },
     "ds": {
-      "scale": 0.5513093793103451,
+      "scale": 0.5513093793103453,
       "offset": [
-        -127.18395229351258,
-        174.20874829165993
+        -565.0150119928365,
+        105.44868805065158
       ]
     }
   },

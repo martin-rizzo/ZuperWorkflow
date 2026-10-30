@@ -16,21 +16,20 @@ STYLE-LAYOUT.txt
 STYLE-POLISH.txt
 
 
-
 >:://======================================================
->:://== ANALOG PHOTO ======================================
+>:://== ZUPER WORKFLOW ====================================
 >:://======================================================
 
 >::SET #WORKFLOW_NAME
-Analog Photo
+Zuper Workflow [Z-Image Turbo]
 
 >::SET #WORKFLOW_DESCRIPTION
-This is an experimental workflow for generating images that resemble analog film photography.
+This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.
 
->::ADJUST_NODE "Z-Image Total Fun*"
-seed  = 1
-style = Lomography Spirit
+>::ADJUST_NODE "Zuper Workflow*"
+seed   = 1
+prompt = Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.
 
 >::MAKE
-{#PWD}/MagicPhoto.json : zworkflow-base.json
+{#PWD}/ZuperWF_advanced.json : ZuperWF_advanced.template.json
 

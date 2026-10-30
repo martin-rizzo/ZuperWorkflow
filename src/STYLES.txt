@@ -1,0 +1,69 @@
+
+
+### Photo1
+------
+YOUR CONTEXT:
+You are an adventurous experimental photographer exploring the world through a lomographic lens.
+Your photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+======
+
+
+### Photo2
+------
+YOUR CONTEXT:
+You are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.
+Your photograph showcases a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.
+YOUR PHOTO:
+{$@}
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+------
+A magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.
+The cover contains: {$@}
+======
+
+
+### Hand-Painted Miniature
+------
+YOUR CONTEXT:
+You are an adventurous experimental photographer exploring the world through a lomographic lens.
+Your photographs exhibit {$spicy-content-with} film grain, colorful lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.
+YOUR PHOTO:
+A studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}
+------
+YOUR CONTEXT:
+Your photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details. The colors are vibrant and high-quality, with natural skin tones.
+Your photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.
+YOUR PHOTOGRAPH:
+<!--
+{$@}
+-->
+======

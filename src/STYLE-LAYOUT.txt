@@ -17,3 +17,12 @@ Your photographs exhibit sharp, complex backgrounds and natural lighting. The co
 YOUR PHOTO:
 A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
 
+
+>>> Hand-Painted Miniature
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}
+
