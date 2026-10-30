@@ -1,9 +1,9 @@
 """
   File    : ZMAKE.py
-  Purpose : Build Z-Image Workflows from source templates and configuration files.
+  Purpose : Build Workflows from source templates and configuration files.
   Author  : Martin Rizzo | <martinrizzo@gmail.com>
   Date    : Sep 18, 2026
-  Repo    : https://github.com/martin-rizzo/ZImageTotalFun
+  Repo    : https://github.com/martin-rizzo/ZuperWorkflow
   License : Unlicense
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                              Z-Image Total Fun!!!
