@@ -12,15 +12,23 @@
 """
 from __future__ import annotations
 import os
+import re
 import sys
 import json
 import shlex
 import argparse
 from pathlib import Path
 from typing import overload, NoReturn, Any
+type TextLines = list[str]
 
 # default directory where to look for source files
-DEFAULT_SOURCE_DIR = "src"
+_DEFAULT_SOURCE_DIR = "src"
+
+# compiled regex for extracting paths and segments
+# Examples:
+#   "path/to/file"     -> path="path/to/file", segment=0
+#   "path/to/file[#5]" -> path="path/to/file", segment=5
+_PATH_SEGMENT_RE = re.compile(r'^(.*?)(\[#?(\d+)\])?$')
 
 
 # ANSI escape codes for colored terminal output
@@ -123,6 +131,121 @@ def rel(path: Path | str) -> str:
         return './' + str(target_path.relative_to(_reference_dir))
     except ValueError:
         return str(target_path)
+
+
+#----------------------------- PATH + SEGMENT ------------------------------#
+
+def parse_paths_segments(text_lines: list[str], *,
+                               base_dir  : Path
+                              ) -> list[tuple[Path,int]]:
+    """
+    Extract file paths and optional segment indices from a list of content lines.
+
+    Parses each line in `text_lines` to identify file paths.
+    Lines can optionally include a segment index in the format `[#N]` (e.g.,
+    `path/to/file[#5]`), which indicates a specific portion or segment of the
+    file. If no segment index is provided, it defaults to 0.
+
+    Args:
+        text_lines: A list of strings representing file paths, potentially
+                    with segment annotations.
+        base_dir:   The base directory to which relative paths will be resolved.
+
+    Returns:
+        A list of tuples, where each tuple contains:
+        - A `Path` object representing the resolved file path.
+        - An integer representing the segment index (0 if not specified).
+    """
+    result : list[tuple[Path,int]] = []
+
+    for line in text_lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        match = _PATH_SEGMENT_RE.match(line)
+        if match:
+            relpath = match.group(1)
+            segment = int(match.group(3)) if match.group(3) else 0
+            result.append((base_dir / relpath, segment))
+        else:
+            result.append((base_dir / line, 0))
+
+    return result
+
+
+def is_separator(line: str, char: str) -> bool:
+    """Checks if a line is a valid separator."""
+    return len(line) >= 6 and all(c == char for c in line)
+
+
+def split_segments(text_lines: TextLines) -> list[TextLines]:
+    """Splits a list of text lines into segments based on '-' separator lines."""
+    segments: list[TextLines] = [[]]
+    segment_idx = 0
+
+    for line in text_lines:
+        if is_separator(line, '-'):
+            segment_idx += 1
+            if segment_idx >= len(segments):
+                segments.append([])
+        else:
+            segments[segment_idx].append(line)
+
+    return segments
+
+
+def filter_segment(text_lines       : TextLines,
+                   segment_to_filter: int
+                   ) -> TextLines:
+    """
+    Filters text lines to extract a specific segment.
+
+    Scans through the provided lines, identifying a block of text enclosed
+    by separator lines ('------' to start, '======' to end). The start and
+    end separators are consumed and not included in the output. Within this
+    block, multiple segments may be separated by '-' lines. The function
+    extracts the lines belonging to the segment at the given index (1-based)
+    and returns them as a list of strings. Lines outside the main block
+    are also preserved in the output.
+
+    Args:
+        text_lines:        A list of strings representing the input text lines.
+        segment_to_filter: The 1-based index of the segment to extract.
+        replace_hashes:    If True, replaces leading '###' with '>>>' in the output.
+
+    Returns:
+        A list of strings containing the filtered lines, including both
+        the selected segment's content and any lines outside the main block.
+    """
+    result         : TextLines = []
+    segmented_lines: TextLines = []
+    in_segments    : bool      = False
+    segment_idx    : int       = segment_to_filter - 1
+
+    for line in text_lines:
+
+        # if a simple separator is found, start the segmentation process
+        if is_separator(line, '-') and not in_segments:
+            in_segments = True
+            segmented_lines = []
+            continue
+
+        # if a double separator ("=") is found, end the segmentation process
+        if is_separator(line, '=') and in_segments:
+            in_segments = False
+
+            # store only the content of the user-selected segment
+            segments = split_segments(segmented_lines)
+            if segments and 0 <= segment_idx < len(segments):
+                result.extend(segments[segment_idx])
+            continue
+
+        # if it's a regular text line, append it to the corresponding list
+        if in_segments: segmented_lines.append(line)
+        else:           result.append(line)
+
+    return result
 
 
 #------------------------- ComfyUI NODE OPERATIONS -------------------------#
@@ -514,25 +637,24 @@ class ZMakeParser:
         else:          self.local_vars [var_name.lstrip('#')] = value
 
 
-    def load_var(self, var_name: str, filepaths: list[Path], /, persistent: bool) -> None:
+    def load_var(self, var_name: str, paths_segments: list[tuple[Path,int]], /, persistent: bool) -> None:
         """
         Load the contents of one or more text files into a variable.
 
         Args:
-            var_name:   The name of the variable to store the contents in.
-            filepaths:  A list of Path objects pointing to the text files
-                        to load.
-            persistent: If True, the variable is stored globally and persists
-                        for the entire duration of the script execution.
-                        If False, the variable is stored locally and is only
-                        valid until the next MAKE instruction is encountered.
-
+            var_name:       The name of the variable to store the contents in.
+            paths_segments: A list of tuples containing a `Path` object (and an
+                            segment index), pointing to the text files to load.
+            persistent:     If True, the variable is stored globally and persists
+                            for the entire duration of the script execution.
+                            If False, the variable is stored locally and is only
+                            valid until the next MAKE instruction is encountered.
         Raises:
             FileNotFoundError: If any of the specified files do not exist.
             ValueError: If any file appears to be binary or cannot be decoded as UTF-8.
         """
         # verify that all files exist and are not binary files
-        for filepath in filepaths:
+        for filepath, seg in paths_segments:
             if not filepath.is_file():
                 raise FileNotFoundError(f"File '{rel(filepath)}' does not exist.")
             with filepath.open('rb') as f:
@@ -542,12 +664,18 @@ class ZMakeParser:
 
         # if validation passes, read the contents of all files and concatenate them
         contents: list[str] = []
-        for filepath in filepaths:
+        for filepath, seg in paths_segments:
             try:
-                file_content = filepath.read_text(encoding='utf-8')
+                file_content: str = filepath.read_text(encoding='utf-8')
             except UnicodeDecodeError:
                 raise ValueError(f"File {filepath} cannot be decoded as UTF-8 text.")
-            contents.append(file_content)
+
+            if seg>0:
+                text_lines: list[str] = file_content.splitlines()
+                text_lines = filter_segment(text_lines, segment_to_filter=seg)
+                contents.extend(text_lines)
+            else:
+                contents.append(file_content)
 
         self.set_var(var_name, contents, persistent)
 
@@ -624,14 +752,14 @@ class ZMakeParser:
             self.set_var( var_name, content, persistent=False )
 
         elif instruction == "LOAD!":
-            var_name  : str        = params[0]
-            filepaths : list[Path] = [base_dir / c_line.strip() for c_line in content if c_line.strip()]
-            self.load_var(var_name, filepaths, persistent=True )
+            var_name       : str                   = params[0]
+            paths_segments : list[tuple[Path,int]] = parse_paths_segments(content, base_dir=base_dir)
+            self.load_var(var_name, paths_segments, persistent=True )
 
         elif instruction == "LOAD":
-            var_name  : str        = params[0]
-            filepaths : list[Path] = [base_dir / c_line.strip() for c_line in content if c_line.strip()]
-            self.load_var(var_name, filepaths, persistent=False )
+            var_name       : str                   = params[0]
+            paths_segments : list[tuple[Path,int]] = parse_paths_segments(content, base_dir=base_dir)
+            self.load_var(var_name, paths_segments, persistent=False )
 
         elif instruction == "ADJUST_NODE":
             node_title  : str = params[0]

@@ -7,13 +7,13 @@ requirements.md
 readme.md
 
 >::LOAD! #STYLE-CORE
-STYLE-CORE.txt
+STYLES.sty.txt[#1]
 
 >::LOAD! #STYLE-LAYOUT
-STYLE-LAYOUT.txt
+STYLES.sty.txt[#2]
 
 >::LOAD! #STYLE-POLISH
-STYLE-POLISH.txt
+STYLES.sty.txt[#3]
 
 
 >:://======================================================
