@@ -3,33 +3,42 @@
 >::LOAD! #REQUIREMENTS
 requirements.md
 
->::LOAD! #README
-readme.md
-
->::LOAD! #STYLE-CORE
+>::LOAD! #STYLES-CORE
 STYLES.sty.txt[#1]
 
->::LOAD! #STYLE-LAYOUT
+>::LOAD! #STYLES-LAYOUT
 STYLES.sty.txt[#2]
 
->::LOAD! #STYLE-POLISH
+>::LOAD! #STYLES-POLISH
 STYLES.sty.txt[#3]
 
 
 >:://======================================================
->:://== ZUPER WORKFLOW ====================================
+>:://==  ADVANCED  ========================================
 >:://======================================================
 
+>::LOAD! #README
+readme-advanced.md
+
 >::SET #WORKFLOW_NAME
-Zuper Workflow [Z-Image Turbo]
+🦸 Zuper Workflow [ADVANCED]
 
 >::SET #WORKFLOW_DESCRIPTION
 This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.
 
->::ADJUST_NODE "Zuper Workflow*"
-seed   = 1
-prompt = Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.
-
 >::MAKE
 {#PWD}/ZuperWF_advanced.json : ZuperWF_advanced.template.json
 
+
+>:://======================================================
+>:://==  BASIC  ===========================================
+>:://======================================================
+
+>::LOAD! #README
+readme-basic.md
+
+>::SET #WORKFLOW_NAME
+🦸 Zuper Workflow [BASIC]
+
+>::SET #WORKFLOW_DESCRIPTION
+This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.

@@ -1,8 +1,8 @@
 {
   "id": "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f",
   "revision": 0,
-  "last_node_id": 76,
-  "last_link_id": 140,
+  "last_node_id": 79,
+  "last_link_id": 162,
   "nodes": [
     {
       "id": 22,
@@ -171,12 +171,11 @@
           ]
         }
       ],
-      "title": "{#WORKFLOW_NAME}",
       "properties": {
         "previewExposures": []
       },
       "widgets_values": [
-        4,
+        1,
         "Photo2",
         "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
         8,
@@ -195,7 +194,7 @@
         false
       ],
       "widgets_values_named": {
-        "seed": 4,
+        "seed": 1,
         "style_1": "Photo2",
         "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
         "steps": 8,
@@ -218,8 +217,8 @@
       "id": 63,
       "type": "MarkdownNote",
       "pos": [
-        -780,
-        120
+        -550,
+        60
       ],
       "size": [
         640,
@@ -247,8 +246,8 @@
       "id": 65,
       "type": "MarkdownNote",
       "pos": [
-        -120,
-        120
+        110,
+        60
       ],
       "size": [
         690,
@@ -281,16 +280,29 @@
       "IMAGE"
     ]
   ],
-  "groups": [],
+  "groups": [
+    {
+      "id": 3,
+      "title": "DOCUMENTATION",
+      "bounding": [
+        -560,
+        -10,
+        1370,
+        1680
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
   "definitions": {
     "subgraphs": [
       {
         "id": "22148af9-ea62-4d0e-8039-cfdf1081fa66",
         "version": 1,
         "state": {
-          "lastGroupId": 2,
-          "lastNodeId": 76,
-          "lastLinkId": 140,
+          "lastGroupId": 3,
+          "lastNodeId": 79,
+          "lastLinkId": 162,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -320,7 +332,7 @@
             "name": "seed",
             "type": "INT",
             "linkIds": [
-              75
+              150
             ],
             "pos": [
               -831.234375,
@@ -333,8 +345,8 @@
             "type": "ZIPN_STYLE",
             "linkIds": [
               127,
-              128,
-              138
+              138,
+              158
             ],
             "label": "style",
             "pos": [
@@ -348,8 +360,8 @@
             "type": "STRING",
             "linkIds": [
               116,
-              117,
-              139
+              139,
+              159
             ],
             "pos": [
               -831.234375,
@@ -361,7 +373,7 @@
             "name": "steps",
             "type": "INT",
             "linkIds": [
-              76
+              151
             ],
             "pos": [
               -831.234375,
@@ -373,7 +385,7 @@
             "name": "initial_bias",
             "type": "FLOAT",
             "linkIds": [
-              77
+              152
             ],
             "label": "noise_shift",
             "pos": [
@@ -386,7 +398,7 @@
             "name": "turbo_creativity",
             "type": "BOOLEAN",
             "linkIds": [
-              78
+              153
             ],
             "pos": [
               -831.234375,
@@ -437,7 +449,7 @@
             "name": "detailed_refiner",
             "type": "BOOLEAN",
             "linkIds": [
-              79
+              154
             ],
             "label": "detailed_sampling",
             "pos": [
@@ -527,7 +539,7 @@
             "name": "enable_label",
             "type": "BOOLEAN",
             "linkIds": [
-              121
+              142
             ],
             "label": "imprint_style_label",
             "pos": [
@@ -542,7 +554,7 @@
             "name": "IMAGE",
             "type": "IMAGE",
             "linkIds": [
-              32
+              144
             ],
             "pos": [
               3067.1419201737526,
@@ -739,7 +751,7 @@
                 "name": "MODEL",
                 "type": "MODEL",
                 "links": [
-                  74
+                  146
                 ]
               }
             ],
@@ -793,7 +805,7 @@
                 "name": "LATENT",
                 "type": "LATENT",
                 "links": [
-                  73
+                  145
                 ]
               }
             ],
@@ -832,7 +844,7 @@
                 "localized_name": "samples",
                 "name": "samples",
                 "type": "LATENT",
-                "link": 72
+                "link": 155
               },
               {
                 "localized_name": "vae",
@@ -864,94 +876,6 @@
             }
           },
           {
-            "id": 19,
-            "type": "ImageLabeler2 //ZImagePowerNodes",
-            "pos": [
-              2650,
-              -170
-            ],
-            "size": [
-              270,
-              440
-            ],
-            "flags": {},
-            "order": 9,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "image",
-                "name": "image",
-                "type": "IMAGE",
-                "link": 132
-              },
-              {
-                "localized_name": "enable_label",
-                "name": "enable_label",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "enable_label"
-                },
-                "link": 121
-              },
-              {
-                "localized_name": "text",
-                "name": "text",
-                "type": "STRING",
-                "widget": {
-                  "name": "text"
-                },
-                "link": 120
-              },
-              {
-                "localized_name": "divider1",
-                "name": "divider1",
-                "type": "ZIPN_SEPARATOR",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  32
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "ImageLabeler2 //ZImagePowerNodes"
-            },
-            "widgets_values": [
-              false,
-              null,
-              "",
-              "#003C96",
-              "#FFFFFF",
-              "roboto_slab",
-              46,
-              "none",
-              "bottom_right",
-              -1,
-              0,
-              0
-            ],
-            "widgets_values_named": {
-              "enable_label": false,
-              "divider1": null,
-              "text": "",
-              "text_color": "#003C96",
-              "background_color": "#FFFFFF",
-              "font_name": "roboto_slab",
-              "font_size": 46,
-              "font_scale": "none",
-              "label_position": "bottom_right",
-              "label_padding": -1,
-              "min_label_width": 0,
-              "min_label_height": 0
-            }
-          },
-          {
             "id": 23,
             "type": "Reroute",
             "pos": [
@@ -963,7 +887,7 @@
               26
             ],
             "flags": {},
-            "order": 10,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -998,7 +922,7 @@
               26
             ],
             "flags": {},
-            "order": 11,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -1022,143 +946,6 @@
             }
           },
           {
-            "id": 27,
-            "type": "ZSamplerTurboX21 //ZImagePowerNodes",
-            "pos": [
-              1240,
-              -520
-            ],
-            "size": [
-              370,
-              720
-            ],
-            "flags": {},
-            "order": 12,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "latent_input",
-                "name": "latent_input",
-                "type": "LATENT",
-                "link": 73
-              },
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 74
-              },
-              {
-                "localized_name": "positive",
-                "name": "positive",
-                "type": "CONDITIONING",
-                "link": 107
-              },
-              {
-                "localized_name": "positive_stg2",
-                "name": "positive_stg2",
-                "shape": 7,
-                "type": "CONDITIONING",
-                "link": 108
-              },
-              {
-                "localized_name": "positive_stg3",
-                "name": "positive_stg3",
-                "shape": 7,
-                "type": "CONDITIONING",
-                "link": 140
-              },
-              {
-                "localized_name": "seed",
-                "name": "seed",
-                "type": "INT",
-                "widget": {
-                  "name": "seed"
-                },
-                "link": 75
-              },
-              {
-                "localized_name": "steps",
-                "name": "steps",
-                "type": "INT",
-                "widget": {
-                  "name": "steps"
-                },
-                "link": 76
-              },
-              {
-                "localized_name": "initial_bias",
-                "name": "initial_bias",
-                "type": "FLOAT",
-                "widget": {
-                  "name": "initial_bias"
-                },
-                "link": 77
-              },
-              {
-                "localized_name": "turbo_creativity",
-                "name": "turbo_creativity",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "turbo_creativity"
-                },
-                "link": 78
-              },
-              {
-                "localized_name": "detailed_refiner",
-                "name": "detailed_refiner",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "detailed_refiner"
-                },
-                "link": 79
-              },
-              {
-                "localized_name": "divider1",
-                "name": "divider1",
-                "type": "ZIPN_SEPARATOR",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "latent_output",
-                "name": "latent_output",
-                "type": "LATENT",
-                "links": [
-                  72
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "ZSamplerTurboX21 //ZImagePowerNodes"
-            },
-            "widgets_values": [
-              1,
-              "fixed",
-              null,
-              8,
-              0,
-              "max_quality",
-              "stages12x_H",
-              true,
-              true,
-              true
-            ],
-            "widgets_values_named": {
-              "seed": 1,
-              "control_after_generate": "fixed",
-              "divider1": null,
-              "steps": 8,
-              "initial_bias": 0,
-              "latent_scaling": "max_quality",
-              "spectral_tilt": "stages12x_H",
-              "turbo_creativity": true,
-              "detailed_refiner": true,
-              "new_scheduler": true
-            }
-          },
-          {
             "id": 37,
             "type": "Reroute",
             "pos": [
@@ -1170,7 +957,7 @@
               26
             ],
             "flags": {},
-            "order": 13,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -1185,8 +972,8 @@
                 "type": "CLIP",
                 "links": [
                   105,
-                  106,
-                  137
+                  137,
+                  156
                 ]
               }
             ],
@@ -1207,7 +994,7 @@
               270
             ],
             "flags": {},
-            "order": 14,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
@@ -1255,7 +1042,7 @@
                 "name": "CONDITIONING",
                 "type": "CONDITIONING",
                 "links": [
-                  107
+                  147
                 ]
               },
               {
@@ -1301,122 +1088,6 @@
             }
           },
           {
-            "id": 61,
-            "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
-            "pos": [
-              710,
-              160
-            ],
-            "size": [
-              440,
-              270
-            ],
-            "flags": {},
-            "order": 15,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 106
-              },
-              {
-                "localized_name": "user_styles",
-                "name": "user_styles",
-                "shape": 7,
-                "type": "STRING",
-                "link": 125
-              },
-              {
-                "localized_name": "user_palettes",
-                "name": "user_palettes",
-                "shape": 7,
-                "type": "STRING",
-                "link": null
-              },
-              {
-                "localized_name": "style",
-                "name": "style",
-                "type": "ZIPN_STYLE",
-                "widget": {
-                  "name": "style"
-                },
-                "link": 128
-              },
-              {
-                "localized_name": "palette",
-                "name": "palette",
-                "type": "ZIPN_PALETTE",
-                "widget": {
-                  "name": "palette"
-                },
-                "link": 115
-              },
-              {
-                "localized_name": "prompt",
-                "name": "prompt",
-                "type": "STRING",
-                "widget": {
-                  "name": "prompt"
-                },
-                "link": 117
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "links": [
-                  108
-                ]
-              },
-              {
-                "localized_name": "PROMPT",
-                "name": "PROMPT",
-                "type": "STRING",
-                "links": [
-                  130
-                ]
-              },
-              {
-                "localized_name": "style_name",
-                "name": "style_name",
-                "type": "STRING",
-                "links": [
-                  120
-                ]
-              },
-              {
-                "localized_name": "palette_name",
-                "name": "palette_name",
-                "type": "STRING",
-                "links": null
-              },
-              {
-                "localized_name": "original_prompt",
-                "name": "original_prompt",
-                "type": "STRING",
-                "links": null
-              }
-            ],
-            "title": "⚗️🔬| STYLE-CORE + Prompt Encoder ^X2.2 (Advanced)",
-            "properties": {
-              "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
-            },
-            "widgets_values": [
-              "none",
-              "none",
-              ""
-            ],
-            "widgets_values_named": {
-              "style": "none",
-              "palette": "none",
-              "prompt": ""
-            }
-          },
-          {
             "id": 69,
             "type": "PrimitiveStringMultiline",
             "pos": [
@@ -1437,19 +1108,19 @@
                 "name": "STRING",
                 "type": "STRING",
                 "links": [
-                  125
+                  157
                 ]
               }
             ],
-            "title": "STYLE-CORE [stage2]",
+            "title": "STYLES-CORE [stage2]",
             "properties": {
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              "{#STYLE-CORE}"
+              "{#STYLES-CORE}"
             ],
             "widgets_values_named": {
-              "value": "{#STYLE-CORE}"
+              "value": "{#STYLES-CORE}"
             },
             "color": "#432",
             "bgcolor": "#653"
@@ -1479,15 +1150,15 @@
                 ]
               }
             ],
-            "title": "STYLE-LAYOUT [stage1]",
+            "title": "STYLES-LAYOUT [stage1]",
             "properties": {
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              "{#STYLE-LAYOUT}"
+              "{#STYLES-LAYOUT}"
             ],
             "widgets_values_named": {
-              "value": "{#STYLE-LAYOUT}"
+              "value": "{#STYLES-LAYOUT}"
             },
             "color": "#432",
             "bgcolor": "#653"
@@ -1504,7 +1175,7 @@
               390
             ],
             "flags": {},
-            "order": 16,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -1541,14 +1212,14 @@
               390
             ],
             "flags": {},
-            "order": 17,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
                 "localized_name": "source",
                 "name": "source",
                 "type": "*",
-                "link": 130
+                "link": 161
               }
             ],
             "outputs": [
@@ -1578,7 +1249,7 @@
               370
             ],
             "flags": {},
-            "order": 18,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -1621,7 +1292,7 @@
                 "name": "IMAGE",
                 "type": "IMAGE",
                 "links": [
-                  132
+                  143
                 ]
               }
             ],
@@ -1667,7 +1338,7 @@
               270
             ],
             "flags": {},
-            "order": 19,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -1715,7 +1386,7 @@
                 "name": "CONDITIONING",
                 "type": "CONDITIONING",
                 "links": [
-                  140
+                  149
                 ]
               },
               {
@@ -1783,18 +1454,340 @@
                 ]
               }
             ],
-            "title": "STYLE-POLISH [stage3]",
+            "title": "STYLES-POLISH [stage3]",
             "properties": {
               "Node name for S&R": "PrimitiveStringMultiline"
             },
             "widgets_values": [
-              "{#STYLE-POLISH}"
+              "{#STYLES-POLISH}"
             ],
             "widgets_values_named": {
-              "value": "{#STYLE-POLISH}"
+              "value": "{#STYLES-POLISH}"
             },
             "color": "#432",
             "bgcolor": "#653"
+          },
+          {
+            "id": 77,
+            "type": "ImageLabeler2 //ZImagePowerNodes",
+            "pos": [
+              2660,
+              -170
+            ],
+            "size": [
+              270,
+              330
+            ],
+            "flags": {},
+            "order": 17,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 143
+              },
+              {
+                "localized_name": "enable_label",
+                "name": "enable_label",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "enable_label"
+                },
+                "link": 142
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 162
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  144
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageLabeler2 //ZImagePowerNodes"
+            },
+            "widgets_values": [
+              false,
+              null,
+              "",
+              "#003C96",
+              "#FFFFFF",
+              "roboto_slab",
+              46,
+              "none",
+              "bottom_right",
+              -1,
+              0,
+              0
+            ],
+            "widgets_values_named": {
+              "enable_label": false,
+              "divider1": null,
+              "text": "",
+              "text_color": "#003C96",
+              "background_color": "#FFFFFF",
+              "font_name": "roboto_slab",
+              "font_size": 46,
+              "font_scale": "none",
+              "label_position": "bottom_right",
+              "label_padding": -1,
+              "min_label_width": 0,
+              "min_label_height": 0
+            }
+          },
+          {
+            "id": 78,
+            "type": "ZSamplerTurboX21 //ZImagePowerNodes",
+            "pos": [
+              1490,
+              -630
+            ],
+            "size": [
+              310,
+              420
+            ],
+            "flags": {},
+            "order": 18,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "latent_input",
+                "name": "latent_input",
+                "type": "LATENT",
+                "link": 145
+              },
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 146
+              },
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 147
+              },
+              {
+                "localized_name": "positive_stg2",
+                "name": "positive_stg2",
+                "shape": 7,
+                "type": "CONDITIONING",
+                "link": 160
+              },
+              {
+                "localized_name": "positive_stg3",
+                "name": "positive_stg3",
+                "shape": 7,
+                "type": "CONDITIONING",
+                "link": 149
+              },
+              {
+                "localized_name": "seed",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 150
+              },
+              {
+                "localized_name": "steps",
+                "name": "steps",
+                "type": "INT",
+                "widget": {
+                  "name": "steps"
+                },
+                "link": 151
+              },
+              {
+                "localized_name": "initial_bias",
+                "name": "initial_bias",
+                "type": "FLOAT",
+                "widget": {
+                  "name": "initial_bias"
+                },
+                "link": 152
+              },
+              {
+                "localized_name": "turbo_creativity",
+                "name": "turbo_creativity",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "turbo_creativity"
+                },
+                "link": 153
+              },
+              {
+                "localized_name": "detailed_refiner",
+                "name": "detailed_refiner",
+                "type": "BOOLEAN",
+                "widget": {
+                  "name": "detailed_refiner"
+                },
+                "link": 154
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "latent_output",
+                "name": "latent_output",
+                "type": "LATENT",
+                "links": [
+                  155
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ZSamplerTurboX21 //ZImagePowerNodes"
+            },
+            "widgets_values": [
+              1,
+              "fixed",
+              null,
+              8,
+              0,
+              "max_quality",
+              "stages12x_H",
+              false,
+              true,
+              true
+            ],
+            "widgets_values_named": {
+              "seed": 1,
+              "control_after_generate": "fixed",
+              "divider1": null,
+              "steps": 8,
+              "initial_bias": 0,
+              "latent_scaling": "max_quality",
+              "spectral_tilt": "stages12x_H",
+              "turbo_creativity": false,
+              "detailed_refiner": true,
+              "new_scheduler": true
+            },
+            "color": "#323",
+            "bgcolor": "#535"
+          },
+          {
+            "id": 79,
+            "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
+            "pos": [
+              710,
+              160
+            ],
+            "size": [
+              440,
+              270
+            ],
+            "flags": {},
+            "order": 19,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 156
+              },
+              {
+                "localized_name": "user_styles",
+                "name": "user_styles",
+                "shape": 7,
+                "type": "STRING",
+                "link": 157
+              },
+              {
+                "localized_name": "user_palettes",
+                "name": "user_palettes",
+                "shape": 7,
+                "type": "STRING",
+                "link": null
+              },
+              {
+                "localized_name": "style",
+                "name": "style",
+                "type": "ZIPN_STYLE",
+                "widget": {
+                  "name": "style"
+                },
+                "link": 158
+              },
+              {
+                "localized_name": "prompt",
+                "name": "prompt",
+                "type": "STRING",
+                "widget": {
+                  "name": "prompt"
+                },
+                "link": 159
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  160
+                ]
+              },
+              {
+                "localized_name": "PROMPT",
+                "name": "PROMPT",
+                "type": "STRING",
+                "links": [
+                  161
+                ]
+              },
+              {
+                "localized_name": "style_name",
+                "name": "style_name",
+                "type": "STRING",
+                "links": [
+                  162
+                ]
+              },
+              {
+                "localized_name": "palette_name",
+                "name": "palette_name",
+                "type": "STRING",
+                "links": null
+              },
+              {
+                "localized_name": "original_prompt",
+                "name": "original_prompt",
+                "type": "STRING",
+                "links": null
+              }
+            ],
+            "title": "⚗️🔬| STYLE-CORE + Prompt Encoder ^X2.2 (Advanced)",
+            "properties": {
+              "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
+            },
+            "widgets_values": [
+              "none",
+              "none",
+              ""
+            ],
+            "widgets_values_named": {
+              "style": "none",
+              "palette": "none",
+              "prompt": ""
+            }
           }
         ],
         "groups": [
@@ -1833,14 +1826,6 @@
             "type": "MODEL"
           },
           {
-            "id": 32,
-            "origin_id": 19,
-            "origin_slot": 0,
-            "target_id": -20,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
             "id": 49,
             "origin_id": 3,
             "origin_slot": 0,
@@ -1873,30 +1858,6 @@
             "type": "CLIP"
           },
           {
-            "id": 72,
-            "origin_id": 27,
-            "origin_slot": 0,
-            "target_id": 9,
-            "target_slot": 0,
-            "type": "LATENT"
-          },
-          {
-            "id": 73,
-            "origin_id": 7,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 0,
-            "type": "LATENT"
-          },
-          {
-            "id": 74,
-            "origin_id": 18,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 1,
-            "type": "MODEL"
-          },
-          {
             "id": 105,
             "origin_id": 37,
             "origin_slot": 0,
@@ -1905,58 +1866,10 @@
             "type": "CLIP"
           },
           {
-            "id": 106,
-            "origin_id": 37,
-            "origin_slot": 0,
-            "target_id": 61,
-            "target_slot": 0,
-            "type": "CLIP"
-          },
-          {
-            "id": 107,
-            "origin_id": 54,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 2,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 108,
-            "origin_id": 61,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 3,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 115,
-            "origin_id": -10,
-            "origin_slot": 3,
-            "target_id": 61,
-            "target_slot": 4,
-            "type": "ZIPN_PALETTE"
-          },
-          {
-            "id": 120,
-            "origin_id": 61,
-            "origin_slot": 2,
-            "target_id": 19,
-            "target_slot": 2,
-            "type": "STRING"
-          },
-          {
             "id": 124,
             "origin_id": 70,
             "origin_slot": 0,
             "target_id": 54,
-            "target_slot": 1,
-            "type": "STRING"
-          },
-          {
-            "id": 125,
-            "origin_id": 69,
-            "origin_slot": 0,
-            "target_id": 61,
             "target_slot": 1,
             "type": "STRING"
           },
@@ -1969,26 +1882,10 @@
             "type": "STRING"
           },
           {
-            "id": 130,
-            "origin_id": 61,
-            "origin_slot": 1,
-            "target_id": 72,
-            "target_slot": 0,
-            "type": "STRING"
-          },
-          {
             "id": 131,
             "origin_id": 9,
             "origin_slot": 0,
             "target_id": 73,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
-            "id": 132,
-            "origin_id": 73,
-            "origin_slot": 0,
-            "target_id": 19,
             "target_slot": 0,
             "type": "IMAGE"
           },
@@ -2009,34 +1906,10 @@
             "type": "CLIP"
           },
           {
-            "id": 140,
-            "origin_id": 74,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 4,
-            "type": "CONDITIONING"
-          },
-          {
-            "id": 75,
-            "origin_id": -10,
-            "origin_slot": 0,
-            "target_id": 27,
-            "target_slot": 5,
-            "type": "INT"
-          },
-          {
             "id": 127,
             "origin_id": -10,
             "origin_slot": 1,
             "target_id": 54,
-            "target_slot": 3,
-            "type": "ZIPN_STYLE"
-          },
-          {
-            "id": 128,
-            "origin_id": -10,
-            "origin_slot": 1,
-            "target_id": 61,
             "target_slot": 3,
             "type": "ZIPN_STYLE"
           },
@@ -2047,86 +1920,6 @@
             "target_id": 74,
             "target_slot": 3,
             "type": "ZIPN_STYLE"
-          },
-          {
-            "id": 116,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 54,
-            "target_slot": 4,
-            "type": "STRING"
-          },
-          {
-            "id": 117,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 61,
-            "target_slot": 5,
-            "type": "STRING"
-          },
-          {
-            "id": 139,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 74,
-            "target_slot": 4,
-            "type": "STRING"
-          },
-          {
-            "id": 76,
-            "origin_id": -10,
-            "origin_slot": 3,
-            "target_id": 27,
-            "target_slot": 6,
-            "type": "INT"
-          },
-          {
-            "id": 77,
-            "origin_id": -10,
-            "origin_slot": 4,
-            "target_id": 27,
-            "target_slot": 7,
-            "type": "FLOAT"
-          },
-          {
-            "id": 78,
-            "origin_id": -10,
-            "origin_slot": 5,
-            "target_id": 27,
-            "target_slot": 8,
-            "type": "BOOLEAN"
-          },
-          {
-            "id": 133,
-            "origin_id": -10,
-            "origin_slot": 6,
-            "target_id": 73,
-            "target_slot": 1,
-            "type": "FLOAT"
-          },
-          {
-            "id": 134,
-            "origin_id": -10,
-            "origin_slot": 7,
-            "target_id": 73,
-            "target_slot": 2,
-            "type": "FLOAT"
-          },
-          {
-            "id": 135,
-            "origin_id": -10,
-            "origin_slot": 8,
-            "target_id": 73,
-            "target_slot": 3,
-            "type": "FLOAT"
-          },
-          {
-            "id": 79,
-            "origin_id": -10,
-            "origin_slot": 9,
-            "target_id": 27,
-            "target_slot": 9,
-            "type": "BOOLEAN"
           },
           {
             "id": 35,
@@ -2177,12 +1970,204 @@
             "type": "COMBO"
           },
           {
-            "id": 121,
+            "id": 142,
             "origin_id": -10,
             "origin_slot": 16,
-            "target_id": 19,
+            "target_id": 77,
             "target_slot": 1,
             "type": "BOOLEAN"
+          },
+          {
+            "id": 143,
+            "origin_id": 73,
+            "origin_slot": 0,
+            "target_id": 77,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 144,
+            "origin_id": 77,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 145,
+            "origin_id": 7,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 146,
+            "origin_id": 18,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 1,
+            "type": "MODEL"
+          },
+          {
+            "id": 147,
+            "origin_id": 54,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 149,
+            "origin_id": 74,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 4,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 150,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 151,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 78,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 152,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 78,
+            "target_slot": 7,
+            "type": "FLOAT"
+          },
+          {
+            "id": 155,
+            "origin_id": 78,
+            "origin_slot": 0,
+            "target_id": 9,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 156,
+            "origin_id": 37,
+            "origin_slot": 0,
+            "target_id": 79,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 157,
+            "origin_id": 69,
+            "origin_slot": 0,
+            "target_id": 79,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 158,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 79,
+            "target_slot": 3,
+            "type": "ZIPN_STYLE"
+          },
+          {
+            "id": 160,
+            "origin_id": 79,
+            "origin_slot": 0,
+            "target_id": 78,
+            "target_slot": 3,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 161,
+            "origin_id": 79,
+            "origin_slot": 1,
+            "target_id": 72,
+            "target_slot": 0,
+            "type": "STRING"
+          },
+          {
+            "id": 162,
+            "origin_id": 79,
+            "origin_slot": 2,
+            "target_id": 77,
+            "target_slot": 2,
+            "type": "STRING"
+          },
+          {
+            "id": 116,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 54,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 133,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 73,
+            "target_slot": 1,
+            "type": "FLOAT"
+          },
+          {
+            "id": 134,
+            "origin_id": -10,
+            "origin_slot": 7,
+            "target_id": 73,
+            "target_slot": 2,
+            "type": "FLOAT"
+          },
+          {
+            "id": 135,
+            "origin_id": -10,
+            "origin_slot": 8,
+            "target_id": 73,
+            "target_slot": 3,
+            "type": "FLOAT"
+          },
+          {
+            "id": 139,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 74,
+            "target_slot": 4,
+            "type": "STRING"
+          },
+          {
+            "id": 153,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 78,
+            "target_slot": 8,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 154,
+            "origin_id": -10,
+            "origin_slot": 9,
+            "target_id": 78,
+            "target_slot": 9,
+            "type": "BOOLEAN"
+          },
+          {
+            "id": 159,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 79,
+            "target_slot": 4,
+            "type": "STRING"
           }
         ],
         "extra": {}
@@ -2196,10 +2181,10 @@
       "favorites": []
     },
     "ds": {
-      "scale": 0.5513093793103453,
+      "scale": 0.551309379310346,
       "offset": [
-        -565.0150119928365,
-        105.44868805065158
+        -205.37676207024384,
+        144.50014647701693
       ]
     }
   },
