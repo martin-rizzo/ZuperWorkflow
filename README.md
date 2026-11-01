@@ -16,9 +16,10 @@
   <img alt="Last"     src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
 </p>
 
-**Zuper Workflow** is a workflow designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), leveraging the power of the **Z-Image Turbo** model. It enables generate spectacular images with minimal effort, offering a balance between simplicity and advanced customization.
+**Zuper Workflow** is a workflow designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), leveraging
+the power of the **Z-Image Turbo** model. It enables generate spectacular images with minimal effort, offering
+a balance between simplicity and advanced customization.
 
----
 
 ## 💎 Features
 
@@ -30,7 +31,6 @@
 - **Modular Design**: The workflows are built using a source modular structure, allowing for easy updates and rebuild.
 - **Inline Documentation**: Clear and concise documentation within the workflow JSON to guide users through configuration options.
 
----
 
 ## 📂 Project Structure
 
@@ -52,7 +52,6 @@
     └── requirements.md                 # Requirements section for workflow internal documentation
 ```
 
----
 
 ## Getting Started
 
@@ -63,7 +62,7 @@
 * __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)
 
 
-## Checkpoints utilizados por los workflows
+## Checkpoints Used by the Workflows
 
 **diffusion_models**
 
@@ -78,13 +77,11 @@
 - __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]
 
 
----
 
-## 🎨 Styles
+## 🎨 Internal Style Definitions
 
 The `./src/STYLES.sty.txt` file contains segmented styles for each diffusion stage.
-Este archivo es la base con la que los workflows son luego generados de manera
-automatica con el script zmake.py
+This file serves as the foundation from which the workflows are automatically generated using the `zmake.py` script.
 
 Example segments:
 - **Core Styles**: Define the foundational appearance of the image.
