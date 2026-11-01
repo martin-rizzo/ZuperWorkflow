@@ -1,9 +1,16 @@
-
-# Zuper Workflow
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![ComfyUI](https://img.shields.io/badge/ComfyUI-Plugin-orange.svg)](https://github.com/comfyanonymous/ComfyUI)
-[![Z-Image Turbo](https://img.shields.io/badge/Model-Z--Image%20Turbo-green.svg)](https://huggingface.co/models)
+<h1 align="center">Zuper Workflow</h1>
+<p align="center">ComfyUI workflows for easily generating high-quality images with Z-Image Turbo.</p>
+<!--
+<p align="center">
+  <img alt="screenshot" src="xtra/zuper-workflow-screenshot.jpg">
+</p>
+-->
+<p align="center">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-33F">
+  <img alt="Model"    src="https://img.shields.io/badge/model-Z--Image%20Turbo-33F">
+  <img alt="License"  src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflow?color=11D">
+  <img alt="Last"     src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
+</p>
 
 **Zuper Workflow** is a workflow designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), leveraging the power of the **Z-Image Turbo** model. It enables generate spectacular images with minimal effort, offering a balance between simplicity and advanced customization.
 
