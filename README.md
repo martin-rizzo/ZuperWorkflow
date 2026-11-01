@@ -6,8 +6,12 @@
 </p>
 -->
 <p align="center">
-  <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-33F">
-  <img alt="Model"    src="https://img.shields.io/badge/model-Z--Image%20Turbo-33F">
+  <a href="https://github.com/comfy-org/comfyui" target="_blank">
+    <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-0077B6">
+  </a>
+  <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo" target="_blank">
+    <img alt="Model"    src="https://img.shields.io/badge/model-Z--Image%20Turbo-FF6B6B">
+  </a>
   <img alt="License"  src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflow?color=11D">
   <img alt="Last"     src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
 </p>
