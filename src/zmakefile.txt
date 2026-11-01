@@ -48,3 +48,21 @@ This is an experimental workflow for easily generating high-quality images with 
 
 >::MAKE
 {#PWD}/ZuperWF_basic.json : ZuperWF_basic.template.json
+
+
+>:://======================================================
+>:://==  BASIC APP ========================================
+>:://======================================================
+
+>::LOAD! #README
+readme-basic.md
+
+>::SET #WORKFLOW_NAME
+🦸 Zuper Workflow [BASIC]
+
+>::SET #WORKFLOW_DESCRIPTION
+This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.
+
+>::MAKE
+{#PWD}/ZuperWF_basic-APP.json : ZuperWF_basic-APP.template.json
+

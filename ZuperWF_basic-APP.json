@@ -1,0 +1,1986 @@
+{
+    "id": "166ed953-5a88-4759-82eb-93fca80de826",
+    "revision": 0,
+    "last_node_id": 81,
+    "last_link_id": 165,
+    "nodes": [
+        {
+            "id": 22,
+            "type": "SaveImage //ZImagePowerNodes",
+            "pos": [
+                1690,
+                180
+            ],
+            "size": [
+                700,
+                880
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 42
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "Node name for S&R": "SaveImage //ZImagePowerNodes"
+            },
+            "widgets_values": [
+                "ZIT/%date:yyyy_MM_dd%/ZIT",
+                true
+            ],
+            "widgets_values_named": {
+                "filename_prefix": "ZIT/%date:yyyy_MM_dd%/ZIT",
+                "civitai_compatible_metadata": true
+            }
+        },
+        {
+            "id": 21,
+            "type": "22148af9-ea62-4d0e-8039-cfdf1081fa66",
+            "pos": [
+                1030,
+                180
+            ],
+            "size": [
+                640,
+                880
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+                {
+                    "label": "style",
+                    "name": "style_1",
+                    "type": "ZIPN_STYLE",
+                    "widget": {
+                        "name": "style_1"
+                    },
+                    "link": null
+                },
+                {
+                    "label": "color",
+                    "name": "effect_2_tweak",
+                    "type": "FLOAT",
+                    "widget": {
+                        "name": "effect_2_tweak"
+                    },
+                    "link": null
+                },
+                {
+                    "label": "zimage_turbo_file",
+                    "name": "checkpoint",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "checkpoint"
+                    },
+                    "link": null
+                },
+                {
+                    "label": "qwen3_4b_file",
+                    "name": "checkpoint_1",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "checkpoint_1"
+                    },
+                    "link": null
+                },
+                {
+                    "label": "vae_file",
+                    "name": "vae_name",
+                    "type": "COMBO",
+                    "widget": {
+                        "name": "vae_name"
+                    },
+                    "link": null
+                },
+                {
+                    "label": "imprint_style_label",
+                    "name": "enable_label",
+                    "type": "BOOLEAN",
+                    "widget": {
+                        "name": "enable_label"
+                    },
+                    "link": null
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        42
+                    ]
+                }
+            ],
+            "properties": {
+                "previewExposures": []
+            },
+            "widgets_values": [
+                1,
+                "Photo2",
+                "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                true,
+                0.20000000000000004,
+                false,
+                "z_image_turbo_int8_convrot_bf16emixed.safetensors",
+                "qwen3-4b_int8_convrot_fp16emixed.safetensors",
+                "Z-Image_half_natural_vae.safetensors",
+                false
+            ],
+            "widgets_values_named": {
+                "seed": 1,
+                "style_1": "Photo2",
+                "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "turbo_creativity": true,
+                "effect_2_tweak": 0.20000000000000004,
+                "orientation": false,
+                "checkpoint": "z_image_turbo_int8_convrot_bf16emixed.safetensors",
+                "checkpoint_1": "qwen3-4b_int8_convrot_fp16emixed.safetensors",
+                "vae_name": "Z-Image_half_natural_vae.safetensors",
+                "enable_label": false
+            }
+        },
+        {
+            "id": 63,
+            "type": "MarkdownNote",
+            "pos": [
+                -410,
+                180
+            ],
+            "size": [
+                640,
+                1600
+            ],
+            "flags": {
+                "collapsed": false
+            },
+            "order": 1,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "REQUIREMENTS",
+            "properties": {},
+            "widgets_values": [
+                "## Software Requirements\n\n* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher, preferably the latest available version.\n* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1.2 or higher\n* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)\n\n## Model Requirements\n\n**diffusion_models**\n\n- __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]\n\n**text_encoders**\n\n- __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]\n\n**vae**\n\n- __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   │\n│   └── 📂 diffusion_models/\n│   │   └── z_image_turbo_int8_convrot_bf16emixed.safetensors\n│   │\n│   ├── 📂 text_encoders/\n│   │   └── qwen3-4b_int8_convrot_fp16emixed.safetensors\n│   │\n│   ├── 📂 vae/\n│   │   └── Z-Image_half_natural_vae.safetensors\n```\n\nPlease ensure you update ComfyUI first and have the latest version of the Z-Image Power Nodes installed.\n\n## Alternative Checkpoints\n\n> The following checkpoints are provided as alternatives in case you experience issues.  \n> Due to the wide variety of GPUs, VRAM capacities, and ComfyUI versions, one of these may work better for your system.\n\n**diffusion_models**\n\n- __[z_image_turbo-Q5_K_S.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q5_K_S.gguf)__ [5.19 GB] : GGUF\n- __[z_image_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors)__ [6.20 GB] : ComfyOrg I8ConvRot\n- __[z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors)__ [12.3 GB] : ComfyOrg BF16\n\n**text_encoders**\n\n- __[Qwen3-4B-Q8_0.gguf](https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q8_0.gguf)__ [4.28 GB] : GGUF\n- __[qwen_3_4b_fp8_mixed.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors)__ [5.63 GB] : ComfyOrg FP8\n- __[qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors)__ [8.04 GB] : ComfyOrg BF16\n\n**vae**\n\n- __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors)__ [335 MB] : ComfyOrg\n- More: [Z-Image_clear_vae](https://huggingface.co/easygoing0114/Z-Image_clear_vae), [Z-Image_Anime_VAE](https://huggingface.co/Anzhc/Z-Image_Anime_VAE)\n\n\n"
+            ],
+            "widgets_values_named": {
+                "text": "## Software Requirements\n\n* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher, preferably the latest available version.\n* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1.2 or higher\n* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)\n\n## Model Requirements\n\n**diffusion_models**\n\n- __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]\n\n**text_encoders**\n\n- __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]\n\n**vae**\n\n- __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   │\n│   └── 📂 diffusion_models/\n│   │   └── z_image_turbo_int8_convrot_bf16emixed.safetensors\n│   │\n│   ├── 📂 text_encoders/\n│   │   └── qwen3-4b_int8_convrot_fp16emixed.safetensors\n│   │\n│   ├── 📂 vae/\n│   │   └── Z-Image_half_natural_vae.safetensors\n```\n\nPlease ensure you update ComfyUI first and have the latest version of the Z-Image Power Nodes installed.\n\n## Alternative Checkpoints\n\n> The following checkpoints are provided as alternatives in case you experience issues.  \n> Due to the wide variety of GPUs, VRAM capacities, and ComfyUI versions, one of these may work better for your system.\n\n**diffusion_models**\n\n- __[z_image_turbo-Q5_K_S.gguf](https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/resolve/main/z_image_turbo-Q5_K_S.gguf)__ [5.19 GB] : GGUF\n- __[z_image_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_int8_convrot.safetensors)__ [6.20 GB] : ComfyOrg I8ConvRot\n- __[z_image_turbo_bf16.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors)__ [12.3 GB] : ComfyOrg BF16\n\n**text_encoders**\n\n- __[Qwen3-4B-Q8_0.gguf](https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q8_0.gguf)__ [4.28 GB] : GGUF\n- __[qwen_3_4b_fp8_mixed.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b_fp8_mixed.safetensors)__ [5.63 GB] : ComfyOrg FP8\n- __[qwen_3_4b.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors)__ [8.04 GB] : ComfyOrg BF16\n\n**vae**\n\n- __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors)__ [335 MB] : ComfyOrg\n- More: [Z-Image_clear_vae](https://huggingface.co/easygoing0114/Z-Image_clear_vae), [Z-Image_Anime_VAE](https://huggingface.co/Anzhc/Z-Image_Anime_VAE)\n\n\n"
+            },
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 65,
+            "type": "MarkdownNote",
+            "pos": [
+                240,
+                180
+            ],
+            "size": [
+                690,
+                1270
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "README",
+            "properties": {},
+            "widgets_values": [
+                "## 🦸 Zuper Workflow [BASIC]\n\nThis workflow simplifies image generation with Z-Image Turbo (ZIT), featuring a reduced set of parameters for easy setup. It shares the same internal functionality as the ADVANCED version but offers fewer options to avoid complex configurations. It utilizes \"comfy_kitchen\" and leverages the visual features of \"Node 2.0\", so it is recommended to run the latest version of ComfyUI with these features enabled.\n\n## Parameters\n\n__seed__\n* The initial number for random generation. Each unique seed produces a different image.\n* Results in significantly more dramatic variations when __\"turbo_creativity\"__ is turned on.\n\n__style__\n* The visual style that defines the overall look of your final image.\n\n__prompt__\n* The text description of what you want to see, including subjects, actions, and settings.\n* Avoid style keywords such as photo, comic, or blur, as the selected styles handle all visual effects automatically.\n\n__turbo_creativity__\n* Shakes up the generation process to produce unique, original compositions and avoid generic AI aesthetics.\n* It is prone to generating hallucinations and duplicate elements, especially in high-contrast images.\n* Disable this feature if you require highly precise and complex images.\n* Enable this feature when exploring creative compositions with substantial variations between different seeds.\n* Working with __turbo_creativity__ involves testing multiple seeds until you find the ideal one.\n* Some minor defects and small hallucinations can be corrected by tweaking __\"steps\"__ and __\"initial_bias\"__.\n\n__color__\n* Adjusts the color saturation of the image.\n* 0.0 serves as the neutral baseline.\n\n__orientation__\n* Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.\n\n__zimage_turbo_file__\n* The checkpoint file used for the Z-Image Turbo diffusion model.\n\n__qwen3_4b_file__\n* The checkpoint file used as the text encoder, which must be based on the Qwen3-4b model.\n\n__vae_file__\n* The checkpoint file used for the variational autoencoder.\n"
+            ],
+            "widgets_values_named": {
+                "text": "## 🦸 Zuper Workflow [BASIC]\n\nThis workflow simplifies image generation with Z-Image Turbo (ZIT), featuring a reduced set of parameters for easy setup. It shares the same internal functionality as the ADVANCED version but offers fewer options to avoid complex configurations. It utilizes \"comfy_kitchen\" and leverages the visual features of \"Node 2.0\", so it is recommended to run the latest version of ComfyUI with these features enabled.\n\n## Parameters\n\n__seed__\n* The initial number for random generation. Each unique seed produces a different image.\n* Results in significantly more dramatic variations when __\"turbo_creativity\"__ is turned on.\n\n__style__\n* The visual style that defines the overall look of your final image.\n\n__prompt__\n* The text description of what you want to see, including subjects, actions, and settings.\n* Avoid style keywords such as photo, comic, or blur, as the selected styles handle all visual effects automatically.\n\n__turbo_creativity__\n* Shakes up the generation process to produce unique, original compositions and avoid generic AI aesthetics.\n* It is prone to generating hallucinations and duplicate elements, especially in high-contrast images.\n* Disable this feature if you require highly precise and complex images.\n* Enable this feature when exploring creative compositions with substantial variations between different seeds.\n* Working with __turbo_creativity__ involves testing multiple seeds until you find the ideal one.\n* Some minor defects and small hallucinations can be corrected by tweaking __\"steps\"__ and __\"initial_bias\"__.\n\n__color__\n* Adjusts the color saturation of the image.\n* 0.0 serves as the neutral baseline.\n\n__orientation__\n* Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.\n\n__zimage_turbo_file__\n* The checkpoint file used for the Z-Image Turbo diffusion model.\n\n__qwen3_4b_file__\n* The checkpoint file used as the text encoder, which must be based on the Qwen3-4b model.\n\n__vae_file__\n* The checkpoint file used for the variational autoencoder.\n"
+            },
+            "color": "#222",
+            "bgcolor": "#000"
+        },
+        {
+            "id": 81,
+            "type": "MarkdownNote",
+            "pos": [
+                240,
+                1490
+            ],
+            "size": [
+                690,
+                290
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "ABOUT",
+            "properties": {},
+            "widgets_values": [
+                "## Where to Find the Latest Version of Zuper Workflow\n  * Github : https://github.com/martin-rizzo/ZuperWorkflow\n\n## Other Related Repositories for Z-Image Turbo\n  * Z-Image Power Nodes       : https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes\n  * Z-Image Total Fun!        : https://github.com/martin-rizzo/ZImageTotalFun\n  * Amazing Z-Image Workflows : https://github.com/martin-rizzo/AmazingZImageWorkflow\n\n## Where to Find Me\n  * CivitAI : https://civitai.com/user/Photographer\n  * Reddit  : https://www.reddit.com/user/FotografoVirtual\n  * GitHub  : https://github.com/martin-rizzo\n"
+            ],
+            "widgets_values_named": {
+                "text": "## Where to Find the Latest Version of Zuper Workflow\n  * Github : https://github.com/martin-rizzo/ZuperWorkflow\n\n## Other Related Repositories for Z-Image Turbo\n  * Z-Image Power Nodes       : https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes\n  * Z-Image Total Fun!        : https://github.com/martin-rizzo/ZImageTotalFun\n  * Amazing Z-Image Workflows : https://github.com/martin-rizzo/AmazingZImageWorkflow\n\n## Where to Find Me\n  * CivitAI : https://civitai.com/user/Photographer\n  * Reddit  : https://www.reddit.com/user/FotografoVirtual\n  * GitHub  : https://github.com/martin-rizzo\n"
+            },
+            "color": "#222",
+            "bgcolor": "#000"
+        }
+    ],
+    "links": [
+        [
+            42,
+            21,
+            0,
+            22,
+            0,
+            "IMAGE"
+        ]
+    ],
+    "groups": [
+        {
+            "id": 3,
+            "title": "DOCUMENTATION",
+            "bounding": [
+                -420,
+                110,
+                1360,
+                1680
+            ],
+            "color": "#3f789e",
+            "flags": {}
+        }
+    ],
+    "definitions": {
+        "subgraphs": [
+            {
+                "id": "22148af9-ea62-4d0e-8039-cfdf1081fa66",
+                "version": 1,
+                "state": {
+                    "lastGroupId": 3,
+                    "lastNodeId": 81,
+                    "lastLinkId": 165,
+                    "lastRerouteId": 0
+                },
+                "revision": 0,
+                "config": {},
+                "name": "🦸 Zuper Workflow [BASIC]\n",
+                "inputNode": {
+                    "id": -10,
+                    "bounding": [
+                        -960,
+                        -410,
+                        152.765625,
+                        248
+                    ]
+                },
+                "outputNode": {
+                    "id": -20,
+                    "bounding": [
+                        3043.1419201737526,
+                        -183.10909791688766,
+                        128,
+                        68
+                    ]
+                },
+                "inputs": [
+                    {
+                        "id": "2e3f0467-e31d-4999-bc34-da31fd673795",
+                        "name": "seed",
+                        "type": "INT",
+                        "linkIds": [
+                            150
+                        ],
+                        "pos": [
+                            -831.234375,
+                            -386
+                        ]
+                    },
+                    {
+                        "id": "74379390-cf6b-489b-b1a9-bc2c927e2281",
+                        "name": "style_1",
+                        "type": "ZIPN_STYLE",
+                        "linkIds": [
+                            127,
+                            138,
+                            158
+                        ],
+                        "label": "style",
+                        "pos": [
+                            -831.234375,
+                            -366
+                        ]
+                    },
+                    {
+                        "id": "7e88976f-e6a4-466c-a838-e6243a49b5b5",
+                        "name": "prompt",
+                        "type": "STRING",
+                        "linkIds": [
+                            116,
+                            139,
+                            159
+                        ],
+                        "pos": [
+                            -831.234375,
+                            -346
+                        ]
+                    },
+                    {
+                        "id": "7ba12079-2614-488b-a2b3-9936027c75bb",
+                        "name": "turbo_creativity",
+                        "type": "BOOLEAN",
+                        "linkIds": [
+                            153
+                        ],
+                        "pos": [
+                            -831.234375,
+                            -326
+                        ]
+                    },
+                    {
+                        "id": "4ead56e6-369c-42c7-8b54-b9bf657d7207",
+                        "name": "effect_2_tweak",
+                        "type": "FLOAT",
+                        "linkIds": [
+                            163
+                        ],
+                        "label": "color",
+                        "pos": [
+                            -831.234375,
+                            -306
+                        ]
+                    },
+                    {
+                        "id": "8901aaf5-f44e-416a-95f9-a5420112e193",
+                        "name": "orientation",
+                        "type": "BOOLEAN",
+                        "linkIds": [
+                            35
+                        ],
+                        "pos": [
+                            -831.234375,
+                            -286
+                        ]
+                    },
+                    {
+                        "id": "148981e4-ea4e-4526-aff8-773450ac8143",
+                        "name": "checkpoint",
+                        "type": "COMBO",
+                        "linkIds": [
+                            52
+                        ],
+                        "label": "zimage_turbo_file",
+                        "pos": [
+                            -831.234375,
+                            -266
+                        ]
+                    },
+                    {
+                        "id": "cec509df-e0d7-40d6-a975-7427a1f8fbb9",
+                        "name": "checkpoint_1",
+                        "type": "COMBO",
+                        "linkIds": [
+                            53
+                        ],
+                        "label": "qwen3_4b_file",
+                        "pos": [
+                            -831.234375,
+                            -246
+                        ]
+                    },
+                    {
+                        "id": "083459e9-572f-4135-aa01-b48b548a6a94",
+                        "name": "vae_name",
+                        "type": "COMBO",
+                        "linkIds": [
+                            54
+                        ],
+                        "label": "vae_file",
+                        "pos": [
+                            -831.234375,
+                            -226
+                        ]
+                    },
+                    {
+                        "id": "29a97490-26df-4cdc-81b0-ed1bcd2bdd6d",
+                        "name": "enable_label",
+                        "type": "BOOLEAN",
+                        "linkIds": [
+                            142
+                        ],
+                        "label": "imprint_style_label",
+                        "pos": [
+                            -831.234375,
+                            -206
+                        ]
+                    }
+                ],
+                "outputs": [
+                    {
+                        "id": "4b7bdb53-c06d-4b66-92a4-d88313bf52d2",
+                        "name": "IMAGE",
+                        "type": "IMAGE",
+                        "linkIds": [
+                            144
+                        ],
+                        "pos": [
+                            3067.1419201737526,
+                            -159.10909791688766
+                        ]
+                    }
+                ],
+                "widgets": [],
+                "nodes": [
+                    {
+                        "id": 3,
+                        "type": "VAELoader",
+                        "pos": [
+                            -550,
+                            660
+                        ],
+                        "size": [
+                            590,
+                            140
+                        ],
+                        "flags": {},
+                        "order": 5,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "vae_name",
+                                "name": "vae_name",
+                                "type": "COMBO",
+                                "widget": {
+                                    "name": "vae_name"
+                                },
+                                "link": 54
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "VAE",
+                                "name": "VAE",
+                                "type": "VAE",
+                                "links": [
+                                    49
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "VAELoader"
+                        },
+                        "widgets_values": [
+                            "Z-Image_half_natural_vae.safetensors"
+                        ],
+                        "widgets_values_named": {
+                            "vae_name": "Z-Image_half_natural_vae.safetensors"
+                        },
+                        "color": "#322",
+                        "bgcolor": "#533",
+                        "shape": 1
+                    },
+                    {
+                        "id": 2,
+                        "type": "LoadZImageModel //ZImagePowerNodes",
+                        "pos": [
+                            -550,
+                            230
+                        ],
+                        "size": [
+                            590,
+                            160
+                        ],
+                        "flags": {},
+                        "order": 4,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "checkpoint",
+                                "name": "checkpoint",
+                                "type": "COMBO",
+                                "widget": {
+                                    "name": "checkpoint"
+                                },
+                                "link": 52
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    23
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "LoadZImageModel //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            "z_image_turbo_int8_convrot_bf16emixed.safetensors",
+                            false
+                        ],
+                        "widgets_values_named": {
+                            "checkpoint": "z_image_turbo_int8_convrot_bf16emixed.safetensors",
+                            "file_filter": false
+                        },
+                        "color": "#322",
+                        "bgcolor": "#533",
+                        "shape": 1
+                    },
+                    {
+                        "id": 1,
+                        "type": "LoadQwen34bModel //ZImagePowerNodes",
+                        "pos": [
+                            -550,
+                            440
+                        ],
+                        "size": [
+                            590,
+                            170
+                        ],
+                        "flags": {},
+                        "order": 3,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "checkpoint",
+                                "name": "checkpoint",
+                                "type": "COMBO",
+                                "widget": {
+                                    "name": "checkpoint"
+                                },
+                                "link": 53
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "CLIP",
+                                "name": "CLIP",
+                                "type": "CLIP",
+                                "links": [
+                                    66
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "LoadQwen34bModel //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            "qwen3-4b_int8_convrot_fp16emixed.safetensors",
+                            false,
+                            true
+                        ],
+                        "widgets_values_named": {
+                            "checkpoint": "qwen3-4b_int8_convrot_fp16emixed.safetensors",
+                            "file_filter": false,
+                            "run_on_gpu": true
+                        },
+                        "color": "#322",
+                        "bgcolor": "#533",
+                        "shape": 1
+                    },
+                    {
+                        "id": 18,
+                        "type": "ComfyKitchenAttentionEnabler //ZImagePowerNodes",
+                        "pos": [
+                            110,
+                            230
+                        ],
+                        "size": [
+                            300,
+                            100
+                        ],
+                        "flags": {},
+                        "order": 8,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 23
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "MODEL",
+                                "name": "MODEL",
+                                "type": "MODEL",
+                                "links": [
+                                    146
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "ComfyKitchenAttentionEnabler //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            true
+                        ],
+                        "widgets_values_named": {
+                            "comfy_kitchen_attention": true
+                        }
+                    },
+                    {
+                        "id": 7,
+                        "type": "EmptyZImageLatentImage //ZImagePowerNodes",
+                        "pos": [
+                            220,
+                            -630
+                        ],
+                        "size": [
+                            340,
+                            200
+                        ],
+                        "flags": {},
+                        "order": 6,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "orientation",
+                                "name": "orientation",
+                                "type": "BOOLEAN",
+                                "widget": {
+                                    "name": "orientation"
+                                },
+                                "link": 35
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "LATENT",
+                                "name": "LATENT",
+                                "type": "LATENT",
+                                "links": [
+                                    145
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "EmptyZImageLatentImage //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            false,
+                            "3:2  (photo)",
+                            "medium (recommended)",
+                            1
+                        ],
+                        "widgets_values_named": {
+                            "orientation": false,
+                            "ratio": "3:2  (photo)",
+                            "size": "medium (recommended)",
+                            "batch_size": 1
+                        }
+                    },
+                    {
+                        "id": 9,
+                        "type": "AdvancedVAEDecoderX21 //ZImagePowerNodes",
+                        "pos": [
+                            1960,
+                            -170
+                        ],
+                        "size": [
+                            340,
+                            140
+                        ],
+                        "flags": {},
+                        "order": 7,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "samples",
+                                "name": "samples",
+                                "type": "LATENT",
+                                "link": 155
+                            },
+                            {
+                                "localized_name": "vae",
+                                "name": "vae",
+                                "type": "VAE",
+                                "link": 51
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "IMAGE",
+                                "name": "IMAGE",
+                                "type": "IMAGE",
+                                "links": [
+                                    164
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "AdvancedVAEDecoderX21 //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            true,
+                            false
+                        ],
+                        "widgets_values_named": {
+                            "allow_extended_range": true,
+                            "low_vram_mode": false
+                        }
+                    },
+                    {
+                        "id": 23,
+                        "type": "Reroute",
+                        "pos": [
+                            430,
+                            810
+                        ],
+                        "size": [
+                            75,
+                            26
+                        ],
+                        "flags": {},
+                        "order": 9,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "name": "",
+                                "type": "*",
+                                "link": 49
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "name": "",
+                                "type": "VAE",
+                                "links": [
+                                    50
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "showOutputText": false,
+                            "horizontal": false
+                        }
+                    },
+                    {
+                        "id": 24,
+                        "type": "Reroute",
+                        "pos": [
+                            1670,
+                            820
+                        ],
+                        "size": [
+                            75,
+                            26
+                        ],
+                        "flags": {},
+                        "order": 10,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "name": "",
+                                "type": "*",
+                                "link": 50
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "name": "",
+                                "type": "VAE",
+                                "links": [
+                                    51
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "showOutputText": false,
+                            "horizontal": false
+                        }
+                    },
+                    {
+                        "id": 37,
+                        "type": "Reroute",
+                        "pos": [
+                            460,
+                            470
+                        ],
+                        "size": [
+                            75,
+                            26
+                        ],
+                        "flags": {},
+                        "order": 11,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "name": "",
+                                "type": "*",
+                                "link": 66
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "name": "",
+                                "type": "CLIP",
+                                "links": [
+                                    105,
+                                    137,
+                                    156
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "showOutputText": false,
+                            "horizontal": false
+                        }
+                    },
+                    {
+                        "id": 54,
+                        "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
+                        "pos": [
+                            710,
+                            480
+                        ],
+                        "size": [
+                            440,
+                            270
+                        ],
+                        "flags": {},
+                        "order": 12,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 105
+                            },
+                            {
+                                "localized_name": "user_styles",
+                                "name": "user_styles",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": 124
+                            },
+                            {
+                                "localized_name": "user_palettes",
+                                "name": "user_palettes",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": null
+                            },
+                            {
+                                "localized_name": "style",
+                                "name": "style",
+                                "type": "ZIPN_STYLE",
+                                "widget": {
+                                    "name": "style"
+                                },
+                                "link": 127
+                            },
+                            {
+                                "localized_name": "prompt",
+                                "name": "prompt",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "prompt"
+                                },
+                                "link": 116
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "CONDITIONING",
+                                "name": "CONDITIONING",
+                                "type": "CONDITIONING",
+                                "links": [
+                                    147
+                                ]
+                            },
+                            {
+                                "localized_name": "PROMPT",
+                                "name": "PROMPT",
+                                "type": "STRING",
+                                "links": [
+                                    129
+                                ]
+                            },
+                            {
+                                "localized_name": "style_name",
+                                "name": "style_name",
+                                "type": "STRING",
+                                "links": []
+                            },
+                            {
+                                "localized_name": "palette_name",
+                                "name": "palette_name",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "original_prompt",
+                                "name": "original_prompt",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "title": "⚗️🔬| STYLE-LAYOUT + Prompt Encoder ^X2.2 (Advanced)",
+                        "properties": {
+                            "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            "none",
+                            "none",
+                            ""
+                        ],
+                        "widgets_values_named": {
+                            "style": "none",
+                            "palette": "none",
+                            "prompt": ""
+                        }
+                    },
+                    {
+                        "id": 69,
+                        "type": "PrimitiveStringMultiline",
+                        "pos": [
+                            -300,
+                            1060
+                        ],
+                        "size": [
+                            820,
+                            1060
+                        ],
+                        "flags": {},
+                        "order": 0,
+                        "mode": 0,
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "localized_name": "STRING",
+                                "name": "STRING",
+                                "type": "STRING",
+                                "links": [
+                                    157
+                                ]
+                            }
+                        ],
+                        "title": "STYLES-CORE [stage2]",
+                        "properties": {
+                            "Node name for S&R": "PrimitiveStringMultiline"
+                        },
+                        "widgets_values": [
+                            "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nYOUR CONTEXT:\nYou are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.\nYour photograph showcases a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.\nYOUR PHOTO:\n{$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, colorful lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}"
+                        ],
+                        "widgets_values_named": {
+                            "value": "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nYOUR CONTEXT:\nYou are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.\nYour photograph showcases a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.\nYOUR PHOTO:\n{$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYou are an adventurous experimental photographer exploring the world through a lomographic lens.\nYour photographs exhibit film grain, colorful lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.\nYOUR PHOTO:\nA studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}"
+                        },
+                        "color": "#432",
+                        "bgcolor": "#653"
+                    },
+                    {
+                        "id": 70,
+                        "type": "PrimitiveStringMultiline",
+                        "pos": [
+                            530,
+                            1060
+                        ],
+                        "size": [
+                            820,
+                            1060
+                        ],
+                        "flags": {},
+                        "order": 1,
+                        "mode": 0,
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "localized_name": "STRING",
+                                "name": "STRING",
+                                "type": "STRING",
+                                "links": [
+                                    124
+                                ]
+                            }
+                        ],
+                        "title": "STYLES-LAYOUT [stage1]",
+                        "properties": {
+                            "Node name for S&R": "PrimitiveStringMultiline"
+                        },
+                        "widgets_values": [
+                            "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}"
+                        ],
+                        "widgets_values_named": {
+                            "value": "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a hand-painted resin display miniature. This is a 28mm-scale miniature from the Warhammer 40k universe, painted by hand. Full body that fit in the shot. Black figurine base. Macroshot, detailed painted texture. This is a figurine on a black background: --- {$@}"
+                        },
+                        "color": "#432",
+                        "bgcolor": "#653"
+                    },
+                    {
+                        "id": 71,
+                        "type": "PreviewAny",
+                        "pos": [
+                            2440,
+                            830
+                        ],
+                        "size": [
+                            940,
+                            390
+                        ],
+                        "flags": {},
+                        "order": 13,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "source",
+                                "name": "source",
+                                "type": "*",
+                                "link": 129
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "STRING",
+                                "name": "STRING",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "title": "Preview LAYOUT prompt",
+                        "properties": {
+                            "Node name for S&R": "PreviewAny"
+                        },
+                        "widgets_values": [],
+                        "widgets_values_named": {}
+                    },
+                    {
+                        "id": 72,
+                        "type": "PreviewAny",
+                        "pos": [
+                            2440,
+                            400
+                        ],
+                        "size": [
+                            940,
+                            390
+                        ],
+                        "flags": {},
+                        "order": 14,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "source",
+                                "name": "source",
+                                "type": "*",
+                                "link": 161
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "STRING",
+                                "name": "STRING",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "title": "Preview CORE prompt",
+                        "properties": {
+                            "Node name for S&R": "PreviewAny"
+                        },
+                        "widgets_values": [],
+                        "widgets_values_named": {}
+                    },
+                    {
+                        "id": 74,
+                        "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
+                        "pos": [
+                            1170,
+                            480
+                        ],
+                        "size": [
+                            440,
+                            270
+                        ],
+                        "flags": {},
+                        "order": 15,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 137
+                            },
+                            {
+                                "localized_name": "user_styles",
+                                "name": "user_styles",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": 136
+                            },
+                            {
+                                "localized_name": "user_palettes",
+                                "name": "user_palettes",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": null
+                            },
+                            {
+                                "localized_name": "style",
+                                "name": "style",
+                                "type": "ZIPN_STYLE",
+                                "widget": {
+                                    "name": "style"
+                                },
+                                "link": 138
+                            },
+                            {
+                                "localized_name": "prompt",
+                                "name": "prompt",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "prompt"
+                                },
+                                "link": 139
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "CONDITIONING",
+                                "name": "CONDITIONING",
+                                "type": "CONDITIONING",
+                                "links": [
+                                    149
+                                ]
+                            },
+                            {
+                                "localized_name": "PROMPT",
+                                "name": "PROMPT",
+                                "type": "STRING",
+                                "links": []
+                            },
+                            {
+                                "localized_name": "style_name",
+                                "name": "style_name",
+                                "type": "STRING",
+                                "links": []
+                            },
+                            {
+                                "localized_name": "palette_name",
+                                "name": "palette_name",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "original_prompt",
+                                "name": "original_prompt",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "title": "⚗️🔬| STYLE-POLISH + Prompt Encoder ^X2.2 (Advanced)",
+                        "properties": {
+                            "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            "none",
+                            "none",
+                            ""
+                        ],
+                        "widgets_values_named": {
+                            "style": "none",
+                            "palette": "none",
+                            "prompt": ""
+                        }
+                    },
+                    {
+                        "id": 75,
+                        "type": "PrimitiveStringMultiline",
+                        "pos": [
+                            1360,
+                            1060
+                        ],
+                        "size": [
+                            820,
+                            1060
+                        ],
+                        "flags": {},
+                        "order": 2,
+                        "mode": 0,
+                        "inputs": [],
+                        "outputs": [
+                            {
+                                "localized_name": "STRING",
+                                "name": "STRING",
+                                "type": "STRING",
+                                "links": [
+                                    136
+                                ]
+                            }
+                        ],
+                        "title": "STYLES-POLISH [stage3]",
+                        "properties": {
+                            "Node name for S&R": "PrimitiveStringMultiline"
+                        },
+                        "widgets_values": [
+                            "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nA magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.\nThe cover contains: {$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYour photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details. The colors are vibrant and high-quality, with natural skin tones.\nYour photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.\nYOUR PHOTOGRAPH:\n<!--\n{$@}\n-->"
+                        ],
+                        "widgets_values_named": {
+                            "value": "\n\n>>> Photo1\nYOUR CONTEXT:\nYou are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.\nEvery shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.\nYour photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.\nYOUR PHOTO:\nA studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}\n\n\n>>> Photo2\nA magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.\nThe cover contains: {$@}\n\n\n>>> Hand-Painted Miniature\nYOUR CONTEXT:\nYour photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details. The colors are vibrant and high-quality, with natural skin tones.\nYour photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.\nYOUR PHOTOGRAPH:\n<!--\n{$@}\n-->"
+                        },
+                        "color": "#432",
+                        "bgcolor": "#653"
+                    },
+                    {
+                        "id": 77,
+                        "type": "ImageLabeler2 //ZImagePowerNodes",
+                        "pos": [
+                            2660,
+                            -170
+                        ],
+                        "size": [
+                            270,
+                            330
+                        ],
+                        "flags": {},
+                        "order": 16,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "image",
+                                "name": "image",
+                                "type": "IMAGE",
+                                "link": 165
+                            },
+                            {
+                                "localized_name": "enable_label",
+                                "name": "enable_label",
+                                "type": "BOOLEAN",
+                                "widget": {
+                                    "name": "enable_label"
+                                },
+                                "link": 142
+                            },
+                            {
+                                "localized_name": "text",
+                                "name": "text",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "text"
+                                },
+                                "link": 162
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "IMAGE",
+                                "name": "IMAGE",
+                                "type": "IMAGE",
+                                "links": [
+                                    144
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "ImageLabeler2 //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            false,
+                            null,
+                            "",
+                            "#003C96",
+                            "#FFFFFF",
+                            "roboto_slab",
+                            46,
+                            "none",
+                            "bottom_right",
+                            -1,
+                            0,
+                            0
+                        ],
+                        "widgets_values_named": {
+                            "enable_label": false,
+                            "divider1": null,
+                            "text": "",
+                            "text_color": "#003C96",
+                            "background_color": "#FFFFFF",
+                            "font_name": "roboto_slab",
+                            "font_size": 46,
+                            "font_scale": "none",
+                            "label_position": "bottom_right",
+                            "label_padding": -1,
+                            "min_label_width": 0,
+                            "min_label_height": 0
+                        }
+                    },
+                    {
+                        "id": 78,
+                        "type": "ZSamplerTurboX21 //ZImagePowerNodes",
+                        "pos": [
+                            1490,
+                            -630
+                        ],
+                        "size": [
+                            310,
+                            420
+                        ],
+                        "flags": {},
+                        "order": 17,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "latent_input",
+                                "name": "latent_input",
+                                "type": "LATENT",
+                                "link": 145
+                            },
+                            {
+                                "localized_name": "model",
+                                "name": "model",
+                                "type": "MODEL",
+                                "link": 146
+                            },
+                            {
+                                "localized_name": "positive",
+                                "name": "positive",
+                                "type": "CONDITIONING",
+                                "link": 147
+                            },
+                            {
+                                "localized_name": "positive_stg2",
+                                "name": "positive_stg2",
+                                "shape": 7,
+                                "type": "CONDITIONING",
+                                "link": 160
+                            },
+                            {
+                                "localized_name": "positive_stg3",
+                                "name": "positive_stg3",
+                                "shape": 7,
+                                "type": "CONDITIONING",
+                                "link": 149
+                            },
+                            {
+                                "localized_name": "seed",
+                                "name": "seed",
+                                "type": "INT",
+                                "widget": {
+                                    "name": "seed"
+                                },
+                                "link": 150
+                            },
+                            {
+                                "localized_name": "turbo_creativity",
+                                "name": "turbo_creativity",
+                                "type": "BOOLEAN",
+                                "widget": {
+                                    "name": "turbo_creativity"
+                                },
+                                "link": 153
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "latent_output",
+                                "name": "latent_output",
+                                "type": "LATENT",
+                                "links": [
+                                    155
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "ZSamplerTurboX21 //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            1,
+                            "fixed",
+                            null,
+                            8,
+                            0,
+                            "max_quality",
+                            "stages12x_H",
+                            false,
+                            true,
+                            true
+                        ],
+                        "widgets_values_named": {
+                            "seed": 1,
+                            "control_after_generate": "fixed",
+                            "divider1": null,
+                            "steps": 8,
+                            "initial_bias": 0,
+                            "latent_scaling": "max_quality",
+                            "spectral_tilt": "stages12x_H",
+                            "turbo_creativity": false,
+                            "detailed_refiner": true,
+                            "new_scheduler": true
+                        },
+                        "color": "#323",
+                        "bgcolor": "#535"
+                    },
+                    {
+                        "id": 79,
+                        "type": "StylePromptEncoderX22Advanced //ZImagePowerNodes",
+                        "pos": [
+                            710,
+                            160
+                        ],
+                        "size": [
+                            440,
+                            270
+                        ],
+                        "flags": {},
+                        "order": 18,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "clip",
+                                "name": "clip",
+                                "type": "CLIP",
+                                "link": 156
+                            },
+                            {
+                                "localized_name": "user_styles",
+                                "name": "user_styles",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": 157
+                            },
+                            {
+                                "localized_name": "user_palettes",
+                                "name": "user_palettes",
+                                "shape": 7,
+                                "type": "STRING",
+                                "link": null
+                            },
+                            {
+                                "localized_name": "style",
+                                "name": "style",
+                                "type": "ZIPN_STYLE",
+                                "widget": {
+                                    "name": "style"
+                                },
+                                "link": 158
+                            },
+                            {
+                                "localized_name": "prompt",
+                                "name": "prompt",
+                                "type": "STRING",
+                                "widget": {
+                                    "name": "prompt"
+                                },
+                                "link": 159
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "CONDITIONING",
+                                "name": "CONDITIONING",
+                                "type": "CONDITIONING",
+                                "links": [
+                                    160
+                                ]
+                            },
+                            {
+                                "localized_name": "PROMPT",
+                                "name": "PROMPT",
+                                "type": "STRING",
+                                "links": [
+                                    161
+                                ]
+                            },
+                            {
+                                "localized_name": "style_name",
+                                "name": "style_name",
+                                "type": "STRING",
+                                "links": [
+                                    162
+                                ]
+                            },
+                            {
+                                "localized_name": "palette_name",
+                                "name": "palette_name",
+                                "type": "STRING",
+                                "links": null
+                            },
+                            {
+                                "localized_name": "original_prompt",
+                                "name": "original_prompt",
+                                "type": "STRING",
+                                "links": null
+                            }
+                        ],
+                        "title": "⚗️🔬| STYLE-CORE + Prompt Encoder ^X2.2 (Advanced)",
+                        "properties": {
+                            "Node name for S&R": "StylePromptEncoderX22Advanced //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            "none",
+                            "none",
+                            ""
+                        ],
+                        "widgets_values_named": {
+                            "style": "none",
+                            "palette": "none",
+                            "prompt": ""
+                        }
+                    },
+                    {
+                        "id": 80,
+                        "type": "ImageFilter //ZImagePowerNodes",
+                        "pos": [
+                            2340,
+                            -170
+                        ],
+                        "size": [
+                            290,
+                            400
+                        ],
+                        "flags": {},
+                        "order": 19,
+                        "mode": 0,
+                        "inputs": [
+                            {
+                                "localized_name": "images",
+                                "name": "images",
+                                "type": "IMAGE",
+                                "link": 164
+                            },
+                            {
+                                "localized_name": "effect_2_tweak",
+                                "name": "effect_2_tweak",
+                                "type": "FLOAT",
+                                "widget": {
+                                    "name": "effect_2_tweak"
+                                },
+                                "link": 163
+                            }
+                        ],
+                        "outputs": [
+                            {
+                                "localized_name": "IMAGE",
+                                "name": "IMAGE",
+                                "type": "IMAGE",
+                                "links": [
+                                    165
+                                ]
+                            }
+                        ],
+                        "properties": {
+                            "Node name for S&R": "ImageFilter //ZImagePowerNodes"
+                        },
+                        "widgets_values": [
+                            true,
+                            true,
+                            null,
+                            "zgamma",
+                            0.2,
+                            null,
+                            "color",
+                            0,
+                            null,
+                            "color_twist",
+                            -0.2
+                        ],
+                        "widgets_values_named": {
+                            "enable_auto_contrast": true,
+                            "enable_effects": true,
+                            "divider1": null,
+                            "effect_1": "zgamma",
+                            "effect_1_tweak": 0.2,
+                            "divider2": null,
+                            "effect_2": "color",
+                            "effect_2_tweak": 0,
+                            "divider3": null,
+                            "effect_3": "color_twist",
+                            "effect_3_tweak": -0.2
+                        }
+                    }
+                ],
+                "groups": [
+                    {
+                        "id": 1,
+                        "title": "CHECKPOINTS",
+                        "bounding": [
+                            -560,
+                            160,
+                            610,
+                            650
+                        ],
+                        "color": "#3f789e",
+                        "flags": {}
+                    },
+                    {
+                        "id": 2,
+                        "title": "Styles *3",
+                        "bounding": [
+                            -320,
+                            970,
+                            2530,
+                            1180
+                        ],
+                        "color": "#3f789e",
+                        "flags": {}
+                    }
+                ],
+                "links": [
+                    {
+                        "id": 23,
+                        "origin_id": 2,
+                        "origin_slot": 0,
+                        "target_id": 18,
+                        "target_slot": 0,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 49,
+                        "origin_id": 3,
+                        "origin_slot": 0,
+                        "target_id": 23,
+                        "target_slot": 0,
+                        "type": "VAE"
+                    },
+                    {
+                        "id": 50,
+                        "origin_id": 23,
+                        "origin_slot": 0,
+                        "target_id": 24,
+                        "target_slot": 0,
+                        "type": "VAE"
+                    },
+                    {
+                        "id": 51,
+                        "origin_id": 24,
+                        "origin_slot": 0,
+                        "target_id": 9,
+                        "target_slot": 1,
+                        "type": "VAE"
+                    },
+                    {
+                        "id": 66,
+                        "origin_id": 1,
+                        "origin_slot": 0,
+                        "target_id": 37,
+                        "target_slot": 0,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 105,
+                        "origin_id": 37,
+                        "origin_slot": 0,
+                        "target_id": 54,
+                        "target_slot": 0,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 124,
+                        "origin_id": 70,
+                        "origin_slot": 0,
+                        "target_id": 54,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 129,
+                        "origin_id": 54,
+                        "origin_slot": 1,
+                        "target_id": 71,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 136,
+                        "origin_id": 75,
+                        "origin_slot": 0,
+                        "target_id": 74,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 137,
+                        "origin_id": 37,
+                        "origin_slot": 0,
+                        "target_id": 74,
+                        "target_slot": 0,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 127,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 54,
+                        "target_slot": 3,
+                        "type": "ZIPN_STYLE"
+                    },
+                    {
+                        "id": 138,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 74,
+                        "target_slot": 3,
+                        "type": "ZIPN_STYLE"
+                    },
+                    {
+                        "id": 144,
+                        "origin_id": 77,
+                        "origin_slot": 0,
+                        "target_id": -20,
+                        "target_slot": 0,
+                        "type": "IMAGE"
+                    },
+                    {
+                        "id": 145,
+                        "origin_id": 7,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 0,
+                        "type": "LATENT"
+                    },
+                    {
+                        "id": 146,
+                        "origin_id": 18,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 1,
+                        "type": "MODEL"
+                    },
+                    {
+                        "id": 147,
+                        "origin_id": 54,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 2,
+                        "type": "CONDITIONING"
+                    },
+                    {
+                        "id": 149,
+                        "origin_id": 74,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 4,
+                        "type": "CONDITIONING"
+                    },
+                    {
+                        "id": 150,
+                        "origin_id": -10,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 5,
+                        "type": "INT"
+                    },
+                    {
+                        "id": 155,
+                        "origin_id": 78,
+                        "origin_slot": 0,
+                        "target_id": 9,
+                        "target_slot": 0,
+                        "type": "LATENT"
+                    },
+                    {
+                        "id": 156,
+                        "origin_id": 37,
+                        "origin_slot": 0,
+                        "target_id": 79,
+                        "target_slot": 0,
+                        "type": "CLIP"
+                    },
+                    {
+                        "id": 157,
+                        "origin_id": 69,
+                        "origin_slot": 0,
+                        "target_id": 79,
+                        "target_slot": 1,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 158,
+                        "origin_id": -10,
+                        "origin_slot": 1,
+                        "target_id": 79,
+                        "target_slot": 3,
+                        "type": "ZIPN_STYLE"
+                    },
+                    {
+                        "id": 160,
+                        "origin_id": 79,
+                        "origin_slot": 0,
+                        "target_id": 78,
+                        "target_slot": 3,
+                        "type": "CONDITIONING"
+                    },
+                    {
+                        "id": 161,
+                        "origin_id": 79,
+                        "origin_slot": 1,
+                        "target_id": 72,
+                        "target_slot": 0,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 162,
+                        "origin_id": 79,
+                        "origin_slot": 2,
+                        "target_id": 77,
+                        "target_slot": 2,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 164,
+                        "origin_id": 9,
+                        "origin_slot": 0,
+                        "target_id": 80,
+                        "target_slot": 0,
+                        "type": "IMAGE"
+                    },
+                    {
+                        "id": 165,
+                        "origin_id": 80,
+                        "origin_slot": 0,
+                        "target_id": 77,
+                        "target_slot": 0,
+                        "type": "IMAGE"
+                    },
+                    {
+                        "id": 35,
+                        "origin_id": -10,
+                        "origin_slot": 5,
+                        "target_id": 7,
+                        "target_slot": 0,
+                        "type": "BOOLEAN"
+                    },
+                    {
+                        "id": 52,
+                        "origin_id": -10,
+                        "origin_slot": 6,
+                        "target_id": 2,
+                        "target_slot": 0,
+                        "type": "COMBO"
+                    },
+                    {
+                        "id": 53,
+                        "origin_id": -10,
+                        "origin_slot": 7,
+                        "target_id": 1,
+                        "target_slot": 0,
+                        "type": "COMBO"
+                    },
+                    {
+                        "id": 54,
+                        "origin_id": -10,
+                        "origin_slot": 8,
+                        "target_id": 3,
+                        "target_slot": 0,
+                        "type": "COMBO"
+                    },
+                    {
+                        "id": 142,
+                        "origin_id": -10,
+                        "origin_slot": 9,
+                        "target_id": 77,
+                        "target_slot": 1,
+                        "type": "BOOLEAN"
+                    },
+                    {
+                        "id": 116,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 54,
+                        "target_slot": 4,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 139,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 74,
+                        "target_slot": 4,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 153,
+                        "origin_id": -10,
+                        "origin_slot": 3,
+                        "target_id": 78,
+                        "target_slot": 6,
+                        "type": "BOOLEAN"
+                    },
+                    {
+                        "id": 159,
+                        "origin_id": -10,
+                        "origin_slot": 2,
+                        "target_id": 79,
+                        "target_slot": 4,
+                        "type": "STRING"
+                    },
+                    {
+                        "id": 163,
+                        "origin_id": -10,
+                        "origin_slot": 4,
+                        "target_id": 80,
+                        "target_slot": 1,
+                        "type": "FLOAT"
+                    }
+                ],
+                "extra": {}
+            }
+        ]
+    },
+    "config": {},
+    "extra": {
+        "frontendVersion": "1.57.4",
+        "favoritedWidgets": {
+            "favorites": []
+        },
+        "ds": {
+            "scale": 0.8071720622482794,
+            "offset": [
+                -656.2305445668711,
+                18.48964528039802
+            ]
+        },
+        "linearData": {
+            "inputs": [
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:seed",
+                    "seed"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:style_1",
+                    "style_1"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:prompt",
+                    "prompt"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:turbo_creativity",
+                    "turbo_creativity"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:effect_2_tweak",
+                    "effect_2_tweak"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:orientation",
+                    "orientation"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:checkpoint",
+                    "checkpoint"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:checkpoint_1",
+                    "checkpoint_1"
+                ],
+                [
+                    "166ed953-5a88-4759-82eb-93fca80de826:21:vae_name",
+                    "vae_name"
+                ]
+            ],
+            "outputs": [
+                "22"
+            ]
+        },
+        "linearMode": true
+    },
+    "version": 0.4
+}
