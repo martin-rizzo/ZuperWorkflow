@@ -3,6 +3,9 @@
 >::LOAD! #REQUIREMENTS
 requirements.md
 
+>::LOAD! #ABOUT
+about.md
+
 >::LOAD! #STYLES-CORE
 STYLES.sty.txt[#1]
 
@@ -42,3 +45,6 @@ readme-basic.md
 
 >::SET #WORKFLOW_DESCRIPTION
 This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.
+
+>::MAKE
+{#PWD}/ZuperWF_basic.json : ZuperWF_basic.template.json
