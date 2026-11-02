@@ -25,7 +25,6 @@ the power of the **Z-Image Turbo** model. It enables generate spectacular images
 a balance between simplicity and advanced customization.
 
 
-
 ## 💎 Features
 
 - **Effortless Generation**: Easily create high-quality images with optimized settings and pre-configured styles.
@@ -33,6 +32,31 @@ a balance between simplicity and advanced customization.
 - **Dual Interface Modes**: Choose between a classic node spaghetti layout or the new simplified ComfyUI application mode.
 - **Basic & Advanced Variants**: Grouped into `BASIC` workflows for quick results or `ADVANCED` workflows for greater control over the final image.
 - **Modular Design**: Final workflows are built from source files for easy updates and rebuilding.
+
+
+## Requirements
+
+### Software & Custom Nodes
+
+* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher, preferably the latest available version.
+* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1.2 or higher
+* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)
+
+### Checkpoints
+
+* __diffusion_models__
+    - __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]
+
+* __text_encoders__
+    - __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]
+
+* __vae__
+    - __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]
+
+> [!NOTE]
+> Although these are the preconfigured checkpoints, any other Z-Image Turbo
+> or Qwen3-4b models should work correctly, including GGUF formats if
+> [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) is properly installed.
 
 
 ## Parameter Documentation
@@ -83,30 +107,6 @@ a balance between simplicity and advanced customization.
   - The checkpoint file used as the text encoder, which must be based on the Qwen3-4b model.
 * __vae_file__
   - The checkpoint file used for the variational autoencoder.
-
-## Getting Started
-
-### Prerequisites
-
-* __[ComfyUI](https://github.com/Comfy-Org/ComfyUI)__ v0.27 or higher, preferably the latest available version.
-* __[Z-Image Power Nodes](https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes)__ v2.1.2 or higher
-* __[ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF)__ (only if you intend to use GGUF checkpoints)
-
-
-## Checkpoints Used by the Workflows
-
-**diffusion_models**
-
-- __[z_image_turbo_int8_convrot_bf16emixed.safetensors](https://huggingface.co/martin-rizzo/Z-Image-Turbo-INT8-ConvRot-ComfyUI/resolve/main/z_image_turbo_int8_convrot_bf16emixed.safetensors)__ [6.17 GB]
-
-**text_encoders**
-
-- __[qwen3-4b_int8_convrot_fp16emixed.safetensors](https://huggingface.co/martin-rizzo/Qwen3-4B-INT8-ConvRot-ComfyUI/resolve/main/qwen3-4b_int8_convrot_fp16emixed.safetensors)__ [4.42 GB]
-
-**vae**
-
-- __[Z-Image_half_natural_vae.safetensors](https://huggingface.co/easygoing0114/Z-Image_clear_vae/resolve/main/Z-Image_half_natural_vae.safetensors)__ [335 MB]
-
 
 
 ## 📂 Project Structure
