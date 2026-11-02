@@ -7,16 +7,16 @@
 -->
 <p align="center">
   <a href="https://github.com/comfy-org/comfyui" target="_blank">
-    <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-0077B6">
+    <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-DB2777?style=flat-square&logo=nodered&logoColor=white">
   </a>
   <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo" target="_blank">
-    <img alt="Model" src="https://img.shields.io/badge/model-Z--Image%20Turbo-FF6B6B">
+    <img alt="Model" src="https://img.shields.io/badge/model-Z--Image%20Turbo-7C3AED?style=flat-square">
   </a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
-    <img alt="License" src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflows?color=11D">
+    <img alt="License" src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflows?color=0077B6&style=flat-square">
   </a>
   <a href="https://github.com/martin-rizzo/ZuperWorkflows/commits/master/" target="_blank">
-    <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflows">
+    <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflows?style=flat-square">
   </a>
 </p>
 
