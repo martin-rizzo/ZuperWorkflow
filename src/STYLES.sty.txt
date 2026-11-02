@@ -1,35 +1,17 @@
-
-
->>> Photo1
+>>> iPhone Photo
 ------
 YOUR CONTEXT:
-You are an adventurous experimental photographer exploring the world through a lomographic lens.
-Your photographs exhibit film grain, lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.
-YOUR PHOTO:
-A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+You are a friend capturing a spontaneous, unposed moment of a creator in a real-world setting. 
+Your photograph exhibits the raw and effortless look of a candid smartphone snapshot. The shot is taken from a distance, utilizing a wide-to-medium perspective that captures the subject's full presence along with the surrounding environment. 
+The focus is natural and deep, avoiding artificial blur, allowing the background to remain visible and integrated into the scene. Lighting is completely organic and environmental, with natural highlights and shadows that reflect the actual location. 
+The composition is slightly imperfect and unplanned, avoiding a "staged" feel; the subject is caught in a natural movement or a relaxed posture. The image retains the authentic digital texture of a mobile phone, with realistic skin details and a clean, unedited look that feels like a raw photo straight from the camera roll.
+YOUR PHOTOGRAPH:
+{$@}
 ------
 YOUR CONTEXT:
-You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
-Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
-Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
-YOUR PHOTO:
-A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
-------
-YOUR CONTEXT:
-You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
-Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
-Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
-YOUR PHOTO:
-A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
-======
-
-
->>> Photo2
-------
-YOUR CONTEXT:
-You are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.
-Your photograph showcases a low-fidelity, grainy analog film look. The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large and loom over the viewer, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth. There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward. The exposure features a harsh, direct camera flash that creates high contrast, slight motion blur, and authentic light leaks. The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.
-YOUR PHOTO:
+You are a bold artist.
+Your illustration features Pop Art style, characterized by bold vibrant colors. The colors are executed using the pointillist technique, where dots of color come together to create the overall picture. Dazzling patterns and comic style characters. The scene has a flat, two-dimensional appearance typical of pop art aesthetics.
+YOUR ILLUSTRATION:
 {$@}
 ------
 YOUR CONTEXT:
@@ -38,13 +20,65 @@ Every shot is framed with extreme angles, tilted horizons, diagonal lines, and o
 Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
 YOUR PHOTO:
 A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+======
+
+
+>>> Analog Photo
+------
+YOUR CONTEXT
+You are a photographer documenting the mundane, heat-drenched reality of 90s life. Your aesthetic is not a dream; it is an authentic, overexposed, and slightly degraded 35mm physical film capture.
+
+The images are defined by heavy physical overexposure that causes "halation" around edges and intense light-bleeding, as if the film stock was pushed beyond its latitude. The optics used are consumer-grade vintage lenses with characteristic lens flare, chromatic aberration at the frame corners, and a slight lack of sharpness in the periphery. The grain is not "shimmering"; it is coarse, high-ISO film grain that clutters the shadows. The composition feels candid and accidental, avoiding any digital symmetry or "perfect" CG lighting. The light is harsh and oppressive, causing the heatwave to manifest as raw, physical artifacts on the film surface rather than a digital glow.
+The scene is defined by high-key luminosity, where the light physically overwhelms the film emulsion, creating a gritty, lo-fi aesthetic reminiscent of a discarded roll of film left in a hot car.
+YOUR PHOTO:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points. Employ dramatic low-angle or high-angle viewpoints, positioning the camera close to the ground or far above the scene to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
+------
+YOUR CONTEXT
+You are a street photographer documenting the mundane, heat-drenched reality of 90s suburban life. Your aesthetic is not a dream; it is an authentic, overexposed, and slightly degraded 35mm physical film capture.
+
+The images are defined by heavy physical overexposure that causes "halation" around edges and intense light-bleeding, as if the film stock was pushed beyond its latitude. The optics used are consumer-grade vintage lenses with characteristic lens flare, chromatic aberration at the frame corners, and a slight lack of sharpness in the periphery. The grain is not "shimmering"; it is coarse, high-ISO film grain that clutters the shadows. The composition feels candid and accidental, avoiding any digital symmetry or "perfect" CG lighting. The light is harsh and oppressive, causing the heatwave to manifest as raw, physical artifacts on the film surface rather than a digital glow.
+The scene is defined by high-key luminosity, where the light physically overwhelms the film emulsion, creating a gritty, lo-fi aesthetic reminiscent of a discarded roll of film left in a hot car.
+YOUR PHOTO:
+<!-- {$@} -->
+======
+
+
+>>> Flash Photo
+------
+YOUR CONTEXT:
+You are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.
+Your photograph showcases a low-fidelity, grainy analog film look.
+The image features a exaggerated perspective: elements in the immediate foreground are exaggeratedly large, while the background recedes sharply into a distant, small point, creating an aggressive sense of depth.
+There is a noticeable wide-angle distortion at the edges of the frame, pulling the environment inward.
+The lighting features an intense, harsh flash that creates high contrast, with a brightly lit foreground and dark backgrounds.
+The colors are slightly de-saturated with warm highlights and deep, heavy shadows, giving it a chaotic, instant capture feel.
+YOUR PHOTO:
+{$@}
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality.
+Your photographs have a natural,  unpolished aesthetic—something authentic, raw, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points.
+Employ dramatic low-angle or high-angle viewpoints to create a sense of scale and surprise.
+Perspective distortion is embraced: converging lines and exaggerated depth.
+The lighting features an intense, harsh flash that creates high contrast, with a brightly lit foreground and dark backgrounds.
+Your photographs exhibit sharp, complex backgrounds. The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
 ------
 A magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.
 The cover contains: {$@}
 ======
 
 
->>> Hand-Painted Miniature
+>>> Tabletop Miniature
 ------
 YOUR CONTEXT:
 You are an adventurous experimental photographer exploring the world through a lomographic lens.
@@ -67,3 +101,88 @@ YOUR PHOTOGRAPH:
 {$@}
 -->
 ======
+
+
+>>> Chibi Miniature
+------
+YOUR CONTEXT
+You are a stop-motion animator creating scenes in a charming miniature world. The look captures the aesthetic of cute chibi dolls made of glossy plastic, featuring visible articulated joints, in meticulously constructed miniature environments (dioramas). The subjects have a soft, chibi-inspired design with cute, gentle expressions and big, expressive eyes. The lighting is soft and flattering. The lens behavior simulates a professional macro lens with a shallow depth of field, emphasizing textures like polished plastic and miniature fabrics while creating a soft, creamy bokeh.
+The entire scene is a clean, charming, well-preserved maquette.
+The scene is a charming, well-preserved diorama with pastel colors and soft shadows, showcasing exquisite material detail on miniature objects.
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality. Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points.
+Employ dramatic angle viewpoints to create a sense of scale and surprise. Perspective distortion is embraced: converging lines and exaggerated depth.
+The compositions are surprising and feel authentically captured in the moment.
+YOUR PHOTO:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+Your photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details. The colors are vibrant and high-quality, with natural skin tones.
+Your photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.
+YOUR PHOTOGRAPH:
+<!-- {$@} -->
+======
+
+
+>>> Brick Miniature
+------
+YOUR CONTEXT
+You are a master cinematographer specializing in stop-motion animation with the iconic LEGO building system.
+Your aesthetic captures the tactile reality of plastic bricks, studs, and minifigures in a 4K cinematic setting.
+The scene is defined by the geometry of interlocking plastic parts:
+ - visible studs on surfaces
+ - reflective finish of the ABS plastic
+ - yellow skin
+Characters are built exclusively from standard LEGO elements—studs, slopes, and panels—lacking organic softness or realistic skin; instead, they feature printed decal faces or blank, serene expressions typical of minifigs.
+The environment is a constructed set of arches, slopes, and structural supports with the grid-like logic of the LEGO platform. Lighting is crisp and directional, highlighting the semi-reflective sheen of the plastic and casting sharp, geometric shadows.
+The color palette is vibrant, with characters set against a playful, high-contrast plastic aesthetic of the scene.
+YOUR LEGO STOP-MOTION FRAME:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+You are a street photographer capturing candid moments in Android phone cam-quality.
+Your photographs have a natural, unpolished aesthetic; think authentic, gritty, and immediate.
+Every shot is framed with extreme angles, tilted horizons, diagonal lines, and off-center focal points.
+Employ dramatic angle viewpoints to create a sense of scale and surprise,
+including perspective distortion with converging lines and exaggerated depth.
+YOUR PHOTO:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+Your photographs feature sharp focus, high-quality reproduction, and a wide dynamic range that preserves fine details.
+Your photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.
+The colors are vibrant and high-quality, with natural skin tones.
+YOUR PHOTOGRAPH:
+<!-- {$@} -->
+======
+
+
+>>> Dynamic Manga Drawing
+------
+YOUR CONTEXT:
+You are a cutting-edge artist specializing in high-energy, mature industrial sci-fi with a dynamic anime and manga aesthetic. Your work excels in movement, fluidity, and visual storytelling, where every element serves the narrative.
+Your japanese manga illustrations capture high-stakes moments with dynamic ink splatters, evoking rapid, violent motion. The style is sharp and technical, emphasizing intricate clothing, and meticulous urban details.
+The composition employs extreme low-angle shots to amplify the subjects’ power and intimidation. The lighting is strongly directional, casting deep, dramatic shadows that heighten a sense of claustrophobic urgency.
+Your illustration features a Japanese manga style with black line art, combined with complex, thick impasto textures that add depth. The drawing is defined by a bold black ink outline.
+画面采用了夸张的广角透视，并以一种非典型的角度倾斜（例如荷兰斜角），创造出一种新颖的扭曲透视与引人注目的视觉效果。
+YOUR JAPANESE MANGA COMIC BOOK COVER:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+You are a cutting-edge comic artist specializing in high-octane, mature industrial sci-fi where movement is everything.
+Your illustration captures a moment of extreme tension featuring "ink splatters" that suggest rapid motion.
+The composition uses extreme low-angle shots to make the subjects feel powerful and intimidating.
+YOUR ILLUSTRATION:
+<!-- {$@} -->
+------
+YOUR CONTEXT:
+You are an avant-garde comic book artist, specializing in high-intensity, adult-oriented industrial science fiction.
+Your illustration features detailed, thick black outlines combined with impasto oil paint, creating relief and depth.
+The image features high-gloss, ultra-reflective surfaces.
+YOUR ILLUSTRATION:
+<!-- {$@} -->
+======
+
