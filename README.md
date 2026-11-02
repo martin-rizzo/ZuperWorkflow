@@ -66,7 +66,8 @@ offering a balance between simplicity and advanced customization.
   - Avoid style keywords such as photo, comic, or blur, as the selected styles handle all visual effects automatically.
 * __steps__
   - The number of iterations performed during the denoising process.
-  - The optimal setting is 8 steps. Increase this value only if you require better quality or need to fix minor hallucinations caused by `turbo_creativity`, keeping in mind that higher step counts result in longer render times.
+  - The optimal setting is 8 steps. Increase this value only if you require better quality or need to fix minor
+    hallucinations caused by `turbo_creativity`, keeping in mind that higher step counts result in longer render times.
 * __noise_shift__
   - Adjusts the starting noise to generate small variations in the final image or even correct minor hallucinations.
   - 0.0 is the optimal setting and is generally best left unchanged, as its effects can be unpredictable.
@@ -88,9 +89,9 @@ offering a balance between simplicity and advanced customization.
   - Modifies the color tint, primarily used to calibrate skin tones.
   - Typically, a value of -0.2 (negative) works very well.
 * __detailed_sampling__
-  - Applies a different sampling method during the final steps to add finer details, although it may increase generation time.
+  - Applies a different sampling method in final steps for finer details, although it may increase generation time.
 * __orientation__
-  - Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.
+  - Sets the orientation of the final image, vertical for portrait format and horizontal for landscape.
 * __aspect_ratio__
   - Determines the proportional relationship between the width and height of the final image.
 * __ck_attention__
