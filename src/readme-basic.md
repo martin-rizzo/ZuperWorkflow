@@ -1,6 +1,6 @@
 ## 🦸 Zuper Workflow [BASIC]
 
-This workflow simplifies image generation with Z-Image Turbo (ZIT), featuring a reduced set of parameters for easy setup. It shares the same internal functionality as the ADVANCED version but offers fewer options to avoid complex configurations. It utilizes "comfy_kitchen" and leverages the visual features of "Node 2.0", so it is recommended to run the latest version of ComfyUI with these features enabled.
+This workflow simplifies image generation with Z-Image Turbo (ZIT), featuring a reduced set of parameters for easy setup. It shares the same internal functionality as the ADVANCED version but offers fewer options to avoid complex configurations. It leverages comfy_kitchen, subgraphs, and INT8-ConvRot quantization, alongside the visual features of Node 2.0, therefore, it is recommended to run the latest version of ComfyUI with these features enabled.
 
 ## Parameters
 
@@ -25,7 +25,8 @@ __turbo_creativity__
 
 __color__
 * Adjusts the color saturation of the image.
-* 0.0 serves as the neutral baseline.
+* Generally, a value of 0.2 (positive) yields a colorful image.
+* If the image color appears too intense and artificial, it is advisable to lower it to 0.0 or even -0.2 (negative).
 
 __orientation__
 * Sets the orientation of the final image, where vertical creates a portrait format and horizontal creates a landscape format.

@@ -1,7 +1,7 @@
 ## 🦸 Zuper Workflow [ADVANCED]
 
 This workflow enhances image generation with Z-Image Turbo (ZIT), incorporating advanced parameters for precise control without sacrificing ease of use.
-It utilizes "comfy_kitchen" and leverages the visual features of "Node 2.0", so it is recommended to run the latest version of ComfyUI with these features enabled.
+It leverages comfy_kitchen, subgraphs, and INT8-ConvRot quantization, alongside the visual features of Node 2.0, therefore, it is recommended to run the latest version of ComfyUI with these features enabled.
 
 ## Parameters
 
@@ -34,15 +34,16 @@ __turbo_creativity__
 
 __contrast__
 * Controls the intensity of brightness transitions in the final image.
-* 0.0 is the neutral baseline.
+* Typically, a value of 0.2 (positive) works very well.
 
 __color__
 * Adjusts the color saturation of the image.
-* 0.0 serves as the neutral baseline.
+* Generally, a value of 0.2 (positive) yields a colorful image.
+* If the image color appears too intense and artificial, it is advisable to lower it to 0.0 or even -0.2 (negative).
 
 __hue__
 * Modifies the color tint, primarily used to calibrate skin tones.
-* 0.0 serves as the neutral baseline.
+* Typically, a value of -0.2 (negative) works very well.
 
 __detailed_sampling__
 * Applies a different sampling method during the final steps to add finer details, although it may increase generation time.
