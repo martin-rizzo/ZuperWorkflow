@@ -334,7 +334,7 @@
                 },
                 "revision": 0,
                 "config": {},
-                "name": "🦸 Zuper Workflow [ADVANCED]\n",
+                "name": "🦸 Zuper Workflow [ADVANCED]\n[APP]\n",
                 "inputNode": {
                     "id": -10,
                     "bounding": [
@@ -2208,12 +2208,92 @@
             "favorites": []
         },
         "ds": {
-            "scale": 0.6670843489655199,
+            "scale": 0.6670843489655202,
             "offset": [
-                -645.2342345534789,
-                6.335301851398376
+                -564.8300641970018,
+                96.96034132098731
             ]
-        }
+        },
+        "linearData": {
+            "inputs": [
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:seed",
+                    "seed"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:style_1",
+                    "style_1"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:prompt",
+                    "prompt"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:steps",
+                    "steps"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:initial_bias",
+                    "initial_bias"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:turbo_creativity",
+                    "turbo_creativity"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:effect_1_tweak",
+                    "effect_1_tweak"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:effect_2_tweak",
+                    "effect_2_tweak"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:effect_3_tweak",
+                    "effect_3_tweak"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:detailed_refiner",
+                    "detailed_refiner"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:orientation",
+                    "orientation"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:ratio",
+                    "ratio"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:comfy_kitchen_attention",
+                    "comfy_kitchen_attention"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:checkpoint",
+                    "checkpoint"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:checkpoint_1",
+                    "checkpoint_1"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:vae_name",
+                    "vae_name"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:22:civitai_compatible_metadata",
+                    "civitai_compatible_metadata"
+                ],
+                [
+                    "43e11336-f33f-4dbe-aee6-0b3ec1e4e36f:21:enable_label",
+                    "enable_label"
+                ]
+            ],
+            "outputs": [
+                "22"
+            ]
+        },
+        "linearMode": true
     },
     "version": 0.4
 }
