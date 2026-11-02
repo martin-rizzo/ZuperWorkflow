@@ -16,13 +16,13 @@ STYLES.sty.txt[#2]
 STYLES.sty.txt[#3]
 
 >::SET! #ADVANCED_WORKFLOW_NAME
-🦸 Zuper Workflow [ADVANCED]
+🦸 Zuper Workflows [ADVANCED]
 
 >::SET! #ADVANCED_WORKFLOW_DESCRIPTION
 This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.
 
 >::SET! #BASIC_WORKFLOW_NAME
-🦸 Zuper Workflow [BASIC]
+🦸 Zuper Workflows [BASIC]
 
 >::SET! #BASIC_WORKFLOW_DESCRIPTION
 This is an experimental workflow for easily generating high-quality images with Z-Image Turbo.

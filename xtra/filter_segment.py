@@ -3,10 +3,10 @@
   Purpose : Filters text lines to extract specific segments based on separators.
   Author  : Martin Rizzo | <martinrizzo@gmail.com>
   Date    : Oct 30, 2026
-  Repo    : https://github.com/martin-rizzo/ZuperWorkflow
+  Repo    : https://github.com/martin-rizzo/ZuperWorkflows
   License : Unlicense
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                               Zuper Workflow
+                               Zuper Workflows
 A pair of workflows for easily generating high-quality images with Z-Image Turbo.
  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 """

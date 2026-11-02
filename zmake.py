@@ -3,7 +3,7 @@
   Purpose : Build Workflows from source templates and configuration files.
   Author  : Martin Rizzo | <martinrizzo@gmail.com>
   Date    : Sep 18, 2026
-  Repo    : https://github.com/martin-rizzo/ZuperWorkflow
+  Repo    : https://github.com/martin-rizzo/ZuperWorkflows
   License : Unlicense
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                              Z-Image Total Fun!!!

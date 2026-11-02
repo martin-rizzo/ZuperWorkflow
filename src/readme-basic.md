@@ -1,4 +1,4 @@
-## 🦸 Zuper Workflow [BASIC]
+## 🦸 Zuper Workflows [BASIC]
 
 This workflow simplifies image generation with Z-Image Turbo (ZIT), featuring a reduced set of parameters for easy setup. It shares the same internal functionality as the ADVANCED version but offers fewer options to avoid complex configurations. It leverages comfy_kitchen, subgraphs, and INT8-ConvRot quantization, alongside the visual features of Node 2.0, therefore, it is recommended to run the latest version of ComfyUI with these features enabled.
 

@@ -1,8 +1,8 @@
-<h1 align="center">Zuper Workflow</h1>
+<h1 align="center">Zuper Workflows</h1>
 <p align="center">ComfyUI workflows for easily generating high-quality images with Z-Image Turbo.</p>
 <!--
 <p align="center">
-  <img alt="screenshot" src="xtra/zuper-workflow-screenshot.jpg">
+  <img alt="screenshot" src="xtra/zuper-workflows-screenshot.jpg">
 </p>
 -->
 <p align="center">
@@ -13,16 +13,16 @@
     <img alt="Model" src="https://img.shields.io/badge/model-Z--Image%20Turbo-FF6B6B">
   </a>
   <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
-    <img alt="License" src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflow?color=11D">
+    <img alt="License" src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflows?color=11D">
   </a>
-  <a href="https://github.com/martin-rizzo/ZuperWorkflow/commits/master/" target="_blank">
-    <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
+  <a href="https://github.com/martin-rizzo/ZuperWorkflows/commits/master/" target="_blank">
+    <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflows">
   </a>
 </p>
 
-**Zuper Workflow** is a workflow designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), leveraging
-the power of the **Z-Image Turbo** model. It enables generate spectacular images with minimal effort, offering
-a balance between simplicity and advanced customization.
+**Zuper Workflows** are a collection of workflows designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI),
+leveraging the power of the **Z-Image Turbo** model. They enable you to generate spectacular images with minimal effort,
+offering a balance between simplicity and advanced customization.
 
 
 ## 💎 Features

@@ -1,5 +1,5 @@
-## Where to Find the Latest Version of Zuper Workflow
-  * Github : https://github.com/martin-rizzo/ZuperWorkflow
+## Where to Find the Latest Version of Zuper Workflows
+  * Github : https://github.com/martin-rizzo/ZuperWorkflows
 
 ## Other Related Repositories for Z-Image Turbo
   * Z-Image Power Nodes       : https://github.com/martin-rizzo/ComfyUI-ZImagePowerNodes
