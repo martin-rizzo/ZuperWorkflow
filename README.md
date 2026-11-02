@@ -24,16 +24,14 @@ a balance between simplicity and advanced customization.
 
 ## 💎 Features
 
-- **Effortless Generation**: Generate high-quality images with a single click using pre-configured prompt styles and optimized settings.
-- **Style Customization**: Apply distinct styles for each of the three diffusion stages to achieve more original and unique images.
-- **Dual Interface Modes**: Every workflow is delivered in pairs, offering two distinct ways to interact:
-  - **Classic Node Version**: The traditional node-based layout, organized with subgraphs but providing direct access to internal logic for easy customization.
-  - **App Mode Version**: A clean, streamlined interface that hides the complex node connections, transforming the workflow into a plug-and-play application.
-- **Basic & Advanced Variants**: The project includes two groups of workflows: **BASIC** for quick, straightforward generation, and **ADVANCED** for users who need more configuration options and greater flexibility in fine-tuning the final image.
-- **Modular Design**: The workflows are built using a modular source structure, allowing for easy updates and rebuilding.
+- **Effortless Generation**: Easily create high-quality images with optimized settings and pre-configured styles.
+- **Style Customization**: Includes visual styles that leverage each diffusion stage for more original results.
+- **Dual Interface Modes**: Choose between a classic node spaghetti layout or the new simplified ComfyUI application mode.
+- **Basic & Advanced Variants**: Grouped into `BASIC` workflows for quick results or `ADVANCED` workflows for greater control over the final image.
+- **Modular Design**: Final workflows are built from source files for easy updates and rebuilding.
 
 
-## Documentacion de los parámetros disponibles
+## Parameter Documentation
 
 * __seed__
   - The initial number for random generation. Each unique seed produces a different image.
