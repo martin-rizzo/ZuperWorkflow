@@ -175,9 +175,9 @@
                 "previewExposures": []
             },
             "widgets_values": [
-                1,
-                "Photo2",
-                "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                2,
+                "iPhone Photo",
+                "A woman with long hair styled in two intricate braids and loose bangs, wearing a structured blouse tied at the neck with a decorative knot, a fitted corset beneath, and a flowing skirt. She wears metal-framed goggles perched on her forehead. A small beaker filled with shimmering fluid rests in her right hand. Her facial expression subtly suggests a restrained smirk—one that carries both playful confidence and a hint of dry amusement, as if acknowledging an unspoken observation. She stands before a cluttered table holding papers, a mortar, and various small items. Behind her, a windowsill holds shelves lined with bottles and potted plants, while a large, framed window with a stone sill fills the background with ambient light.",
                 8,
                 -2.7755575615628914e-17,
                 true,
@@ -194,9 +194,9 @@
                 false
             ],
             "widgets_values_named": {
-                "seed": 1,
-                "style_1": "Photo2",
-                "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "seed": 2,
+                "style_1": "iPhone Photo",
+                "prompt": "A woman with long hair styled in two intricate braids and loose bangs, wearing a structured blouse tied at the neck with a decorative knot, a fitted corset beneath, and a flowing skirt. She wears metal-framed goggles perched on her forehead. A small beaker filled with shimmering fluid rests in her right hand. Her facial expression subtly suggests a restrained smirk—one that carries both playful confidence and a hint of dry amusement, as if acknowledging an unspoken observation. She stands before a cluttered table holding papers, a mortar, and various small items. Behind her, a windowsill holds shelves lined with bottles and potted plants, while a large, framed window with a stone sill fills the background with ambient light.",
                 "steps": 8,
                 "initial_bias": -2.7755575615628914e-17,
                 "turbo_creativity": true,
@@ -334,7 +334,7 @@
                 },
                 "revision": 0,
                 "config": {},
-                "name": "🦸 Zuper Workflow [ADVANCED]\n[APP]\n",
+                "name": "🦸 Zuper Workflow [ADVANCED][APP]",
                 "inputNode": {
                     "id": -10,
                     "bounding": [

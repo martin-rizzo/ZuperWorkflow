@@ -122,8 +122,8 @@
             },
             "widgets_values": [
                 1,
-                "Photo2",
-                "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "iPhone Photo",
+                "A young woman with wavy, dark brown hair is captured in a medium shot, sipping from a pink can with a blue circular logo. She wears a chunky, knitted beanie with ear flaps in shades of lavender purple, cream, and pale yellow, which hangs loosely over her head. Her attire consists of a loose, pink open-knit sweater that has slipped down to reveal her right shoulder, exposing a pink spaghetti-strap camisole underneath. She holds the can with her left hand while her right hand is raised near her face, fingers gently curled. Her lips are pursed around a white straw, and her gaze is directed upward and to her left. The can prominently features the word \"SUCKER\" printed in a bold, playful, and slightly irregular black font, resembling a custom brand name, positioned centrally below the blue circular logo. The background features a wooden wall with recessed ceiling lights and a refrigerated display case filled with rows of colorful bottled beverages. To the left, a counter area with additional bottles and equipment is partially visible.",
                 true,
                 0.20000000000000004,
                 false,
@@ -134,8 +134,8 @@
             ],
             "widgets_values_named": {
                 "seed": 1,
-                "style_1": "Photo2",
-                "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "style_1": "iPhone Photo",
+                "prompt": "A young woman with wavy, dark brown hair is captured in a medium shot, sipping from a pink can with a blue circular logo. She wears a chunky, knitted beanie with ear flaps in shades of lavender purple, cream, and pale yellow, which hangs loosely over her head. Her attire consists of a loose, pink open-knit sweater that has slipped down to reveal her right shoulder, exposing a pink spaghetti-strap camisole underneath. She holds the can with her left hand while her right hand is raised near her face, fingers gently curled. Her lips are pursed around a white straw, and her gaze is directed upward and to her left. The can prominently features the word \"SUCKER\" printed in a bold, playful, and slightly irregular black font, resembling a custom brand name, positioned centrally below the blue circular logo. The background features a wooden wall with recessed ceiling lights and a refrigerated display case filled with rows of colorful bottled beverages. To the left, a counter area with additional bottles and equipment is partially visible.",
                 "turbo_creativity": true,
                 "effect_2_tweak": 0.20000000000000004,
                 "orientation": false,
@@ -266,7 +266,7 @@
                 },
                 "revision": 0,
                 "config": {},
-                "name": "🦸 Zuper Workflow [BASIC]\n\n",
+                "name": "🦸 Zuper Workflow [BASIC]",
                 "inputNode": {
                     "id": -10,
                     "bounding": [

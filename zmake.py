@@ -18,7 +18,7 @@ import json
 import shlex
 import argparse
 from pathlib import Path
-from typing import overload, NoReturn, Any
+from typing import cast, overload, NoReturn, Any
 type TextLines = list[str]
 
 # default directory where to look for source files
@@ -84,6 +84,15 @@ def fatal_error(message: str, *info_messages: str, padding: int = 0, file=sys.st
     error(message, *info_messages, padding=padding, file=file)
     sys.exit(1)
 
+
+def remove_trailing_empty_lines(text_lines: list[str]):
+    """
+    Removes empty lines from the end of the list in-place.
+    Args:
+        text_lines: A list of strings from which trailing empty lines will be removed.
+    """
+    while text_lines and not text_lines[-1].strip():
+        text_lines.pop()
 
 #----------------------------- RELATIVE PATHS ------------------------------#
 
@@ -248,37 +257,105 @@ def filter_segment(text_lines       : TextLines,
     return result
 
 
-#------------------------- ComfyUI NODE OPERATIONS -------------------------#
+#----------------------- ComfyUI SUBGRAPH OPERATIONS -----------------------#
 
-def _find_comfyui_nodes(nodes: list[dict], title: str) -> list[dict]:
-    if not isinstance(nodes, list) or not title:
+def _match_wildcard(pattern: str, text) -> bool:
+    """
+    Matches a text string against a wildcard pattern.
+
+    Supports wildcards ('*') at the beginning, end, or both ends of the pattern.
+    Args:
+        pattern: The wildcard pattern to match against.
+        text:    The text string to be evaluated.
+    Returns:
+        True if the text matches the pattern, False otherwise.
+    """
+    if not isinstance(text,str):
+        return False
+    clean_search         = pattern.strip('*')
+    starts_with_wildcard = pattern.startswith('*')
+    ends_with_wildcard   = pattern.endswith('*')
+
+    if starts_with_wildcard and ends_with_wildcard:
+        return clean_search in text
+    if starts_with_wildcard:
+        return text.endswith(clean_search)
+    if ends_with_wildcard:
+        return text.startswith(clean_search)
+
+    return text == clean_search
+
+
+def find_subgraph_ids(workflow: dict,
+                      name    : str | None
+                      ) -> list[str]:
+    """
+    Retrieve the IDs of subgraphs in a workflow that match a given name pattern.
+
+    This function returns the IDs of all subgraphs whose name matches the
+    provided `name` pattern. The matching supports wildcard patterns using
+    '*' at the beginning or end of the string (e.g., 'foo*' or '*bar').
+
+    Args:
+        workflow: A dictionary representing a ComfyUI workflow JSON structure.
+        name:     The name pattern to match against subgraph names. Use '*' at
+                  the start or end to enable wildcard matching. Pass `None` to
+                  match all subgraphs.
+
+    Returns:
+        A list of strings containing the IDs of matching subgraphs.
+        Returns an empty list if no subgraphs are found or if the workflow
+        structure is invalid.
+    """
+    found_subgraph_id : list[str] = []
+
+    definitions = workflow.get("definitions")  if isinstance(workflow   ,dict) else None
+    subgraphs   = definitions.get("subgraphs") if isinstance(definitions,dict) else None
+    if not isinstance(subgraphs, list):
         return []
 
-    # detect the search type only once at the start
-    is_startswith = title.endswith('*')
-    is_endswith   = title.startswith('*')
-    is_contains   = is_startswith and is_endswith
+    for subgraph in subgraphs:
+        if not isinstance(subgraph, dict):
+            continue
+        match = True
 
-    # strip the asterisks to keep only the actual text to search for
-    clean_title = title.strip('*')
+        # check if subgraph name matches the pattern
+        if name and not _match_wildcard(name, subgraph.get("name")):
+            match = False
+
+        if match:
+            subgraph_id = subgraph.get("id")
+            if isinstance(subgraph_id, str):
+                found_subgraph_id.append(subgraph_id)
+
+    return found_subgraph_id
+
+
+#------------------------- ComfyUI NODE OPERATIONS -------------------------#
+
+
+def _find_comfyui_nodes(nodes: list[dict], *,
+                        title: str | None = None,
+                        type : str | None = None
+                        ) -> list[dict]:
+    if not isinstance(nodes, list):
+        return []
 
     found_nodes = []
     for node in nodes:
         if not isinstance(node, dict):
             continue
-        node_title = node.get("title")
-        if not isinstance(node_title, str):
-            continue
+        match = True
 
-        # evaluate based on the detected wildcard type
-        if is_contains:
-            if clean_title in node_title: found_nodes.append(node)
-        elif is_startswith:
-            if node_title.startswith(clean_title): found_nodes.append(node)
-        elif is_endswith:
-            if node_title.endswith(clean_title): found_nodes.append(node)
-        else:
-            if node_title == clean_title: found_nodes.append(node)
+        # check if node title matches the pattern
+        if (title is not None) and not _match_wildcard(title, node.get("title")):
+            match = False
+        # check if node type matches the pattern
+        if (type is not None) and not _match_wildcard(type, node.get("type")):
+            match = False
+
+        if match:
+            found_nodes.append(node)
 
     return found_nodes
 
@@ -309,22 +386,19 @@ def find_comfyui_nodes(workflow: dict, title: str) -> list[dict]:
 
     found_nodes = []
 
-    # first search for nodes within the main workflow
+    # search for nodes within the main workflow
     # - 'workflow/nodes'
-    nodes = workflow.get("nodes")
-    if isinstance(nodes, list):
-        found_nodes.extend( _find_comfyui_nodes(nodes, title=title) )
+    nodes: list[dict] = workflow.get("nodes") or []
+    if not isinstance(nodes, list):
+        nodes = cast(list[dict], [])
 
-    # then search for nodes within all subgraphs
-    # - 'workflow/definitions/subgraphs[]/nodes'
-    definitions = workflow.get("definitions")
-    if isinstance(definitions,dict):
-        subgraphs = definitions.get("subgraphs")
-        if isinstance(subgraphs, list):
-            for subgraph in subgraphs:
-                nodes = subgraph.get("nodes")
-                if isinstance(nodes, list):
-                    found_nodes.extend( _find_comfyui_nodes(nodes, title=title) )
+    found_nodes.extend( _find_comfyui_nodes(nodes, title=title) )
+
+    # find subgraphs whose names match the 'title' pattern,
+    # and use their IDs as the node type for searching
+    subgraph_ids = find_subgraph_ids(workflow, name=title)
+    for subgraph_id in subgraph_ids:
+        found_nodes.extend( _find_comfyui_nodes(nodes, type=subgraph_id) )
 
     return found_nodes
 
@@ -409,7 +483,7 @@ def adjust_comfyui_nodes(workflow: dict, adjustments: dict[str, dict[str,str]]) 
             for param, value in node_params_to_adjust.items():
                 worked = set_comfyui_node_param(node, param=param, value=value)
                 if worked:
-                    node_title = node.get("title","???")
+                    node_title = node.get("title") or node.get("type")
                     if isinstance(node_title,str):
                         print(f"Node '{node_title.strip()}' adjusted ({param} = {value})")
 
@@ -745,10 +819,12 @@ class ZMakeParser:
 
         elif instruction == "SET!":
             var_name = params[0]
+            remove_trailing_empty_lines(content)
             self.set_var( var_name, content, persistent=True )
 
         elif instruction == "SET":
             var_name = params[0]
+            remove_trailing_empty_lines(content)
             self.set_var( var_name, content, persistent=False )
 
         elif instruction == "LOAD!":

@@ -175,9 +175,9 @@
                 "previewExposures": []
             },
             "widgets_values": [
-                1,
-                "Photo2",
-                "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                2,
+                "Flash Photo",
+                "A slender blonde woman with freckles, wearing a white and black zebra-print full-body jumpsuit with long sleeves and a high neckline. She's walking, showing a glimpse of her back, in a labyrinthine stone maze, looking lost and uncertain. His left arm is slightly raised. She wears high heels. The maze features tall, narrow corridors with curved walls and reddish stone columns. A massive, carved demon head looms on one wall. A weathered wooden sign above the entrance reads \"The Dark MAZE of FORBIDDEN DESIRES\".",
                 8,
                 -2.7755575615628914e-17,
                 true,
@@ -194,9 +194,9 @@
                 false
             ],
             "widgets_values_named": {
-                "seed": 1,
-                "style_1": "Photo2",
-                "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "seed": 2,
+                "style_1": "Flash Photo",
+                "prompt": "A slender blonde woman with freckles, wearing a white and black zebra-print full-body jumpsuit with long sleeves and a high neckline. She's walking, showing a glimpse of her back, in a labyrinthine stone maze, looking lost and uncertain. His left arm is slightly raised. She wears high heels. The maze features tall, narrow corridors with curved walls and reddish stone columns. A massive, carved demon head looms on one wall. A weathered wooden sign above the entrance reads \"The Dark MAZE of FORBIDDEN DESIRES\".",
                 "steps": 8,
                 "initial_bias": -2.7755575615628914e-17,
                 "turbo_creativity": true,
@@ -334,7 +334,7 @@
                 },
                 "revision": 0,
                 "config": {},
-                "name": "🦸 Zuper Workflow [ADVANCED]\n\n",
+                "name": "🦸 Zuper Workflow [ADVANCED]",
                 "inputNode": {
                     "id": -10,
                     "bounding": [

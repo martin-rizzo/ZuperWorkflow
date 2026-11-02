@@ -122,8 +122,8 @@
             },
             "widgets_values": [
                 1,
-                "Photo2",
-                "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "iPhone Photo",
+                "Worn control panels surround a young woman in dirty clothes seated in a spaceship, creating a hyperpunk scene. She sits comfortably and relaxed in the control chair, looking directly at the camera with her legs wide apart. The chair has a large, heavy, polished metal frame, while the seat is padded black leather. The woman exudes self-assurance and gazes at the camera with a subtle, sadistic smile, her expression both sensual and defiant. On the right, you can see the head/skull of a xenomorph, made of bone, displayed as a trophy.",
                 true,
                 0.20000000000000004,
                 false,
@@ -134,8 +134,8 @@
             ],
             "widgets_values_named": {
                 "seed": 1,
-                "style_1": "Photo2",
-                "prompt": "Elon Musk perched on the shoulders of a xenomorph alien in a shopping mall, waving his arm, looking funny, very happy. That is to say, the xenomorph should be at the bottom of the image, smiling and looking at the camera, while Elon is at the top, euphoric with joy. Both of them playfully interacting like two good friends.",
+                "style_1": "iPhone Photo",
+                "prompt": "Worn control panels surround a young woman in dirty clothes seated in a spaceship, creating a hyperpunk scene. She sits comfortably and relaxed in the control chair, looking directly at the camera with her legs wide apart. The chair has a large, heavy, polished metal frame, while the seat is padded black leather. The woman exudes self-assurance and gazes at the camera with a subtle, sadistic smile, her expression both sensual and defiant. On the right, you can see the head/skull of a xenomorph, made of bone, displayed as a trophy.",
                 "turbo_creativity": true,
                 "effect_2_tweak": 0.20000000000000004,
                 "orientation": false,
@@ -266,7 +266,7 @@
                 },
                 "revision": 0,
                 "config": {},
-                "name": "🦸 Zuper Workflow [BASIC]\n[APP]\n",
+                "name": "🦸 Zuper Workflow [BASIC][APP]",
                 "inputNode": {
                     "id": -10,
                     "bounding": [

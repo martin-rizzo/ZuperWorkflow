@@ -41,6 +41,11 @@ readme-advanced.md
 >::SET #WORKFLOW_DESCRIPTION
 {#ADVANCED_WORKFLOW_DESCRIPTION}
 
+>::ADJUST_NODE "🦸 Zuper*"
+seed   = 2
+style  = Flash Photo
+prompt = A slender blonde woman with freckles, wearing a white and black zebra-print full-body jumpsuit with long sleeves and a high neckline. She's walking, showing a glimpse of her back, in a labyrinthine stone maze, looking lost and uncertain. His left arm is slightly raised. She wears high heels. The maze features tall, narrow corridors with curved walls and reddish stone columns. A massive, carved demon head looms on one wall. A weathered wooden sign above the entrance reads "The Dark MAZE of FORBIDDEN DESIRES".
+
 >::MAKE
 {#PWD}/ZuperWF-advanced.json : ZuperWF-advanced.template.json
 
@@ -57,6 +62,11 @@ readme-advanced.md
 
 >::SET #WORKFLOW_DESCRIPTION
 {#ADVANCED_WORKFLOW_DESCRIPTION}
+
+>::ADJUST_NODE "🦸 Zuper*"
+seed   = 2
+style  = iPhone Photo
+prompt = A woman with long hair styled in two intricate braids and loose bangs, wearing a structured blouse tied at the neck with a decorative knot, a fitted corset beneath, and a flowing skirt. She wears metal-framed goggles perched on her forehead. A small beaker filled with shimmering fluid rests in her right hand. Her facial expression subtly suggests a restrained smirk—one that carries both playful confidence and a hint of dry amusement, as if acknowledging an unspoken observation. She stands before a cluttered table holding papers, a mortar, and various small items. Behind her, a windowsill holds shelves lined with bottles and potted plants, while a large, framed window with a stone sill fills the background with ambient light.
 
 >::MAKE
 {#PWD}/ZuperAPP-advanced.json : ZuperAPP-advanced.template.json
@@ -75,6 +85,11 @@ readme-basic.md
 >::SET #WORKFLOW_DESCRIPTION
 {#BASIC_WORKFLOW_DESCRIPTION}
 
+>::ADJUST_NODE "🦸 Zuper*"
+seed   = 1
+style  = iPhone Photo
+prompt = A young woman with wavy, dark brown hair is captured in a medium shot, sipping from a pink can with a blue circular logo. She wears a chunky, knitted beanie with ear flaps in shades of lavender purple, cream, and pale yellow, which hangs loosely over her head. Her attire consists of a loose, pink open-knit sweater that has slipped down to reveal her right shoulder, exposing a pink spaghetti-strap camisole underneath. She holds the can with her left hand while her right hand is raised near her face, fingers gently curled. Her lips are pursed around a white straw, and her gaze is directed upward and to her left. The can prominently features the word "SUCKER" printed in a bold, playful, and slightly irregular black font, resembling a custom brand name, positioned centrally below the blue circular logo. The background features a wooden wall with recessed ceiling lights and a refrigerated display case filled with rows of colorful bottled beverages. To the left, a counter area with additional bottles and equipment is partially visible.
+
 >::MAKE
 {#PWD}/ZuperWF-basic.json : ZuperWF-basic.template.json
 
@@ -91,6 +106,11 @@ readme-basic.md
 
 >::SET #WORKFLOW_DESCRIPTION
 {#BASIC_WORKFLOW_DESCRIPTION}
+
+>::ADJUST_NODE "🦸 Zuper*"
+seed   = 1
+style  = iPhone Photo
+prompt = Worn control panels surround a young woman in dirty clothes seated in a spaceship, creating a hyperpunk scene. She sits comfortably and relaxed in the control chair, looking directly at the camera with her legs wide apart. The chair has a large, heavy, polished metal frame, while the seat is padded black leather. The woman exudes self-assurance and gazes at the camera with a subtle, sadistic smile, her expression both sensual and defiant. On the right, you can see the head/skull of a xenomorph, made of bone, displayed as a trophy.
 
 >::MAKE
 {#PWD}/ZuperAPP-basic.json : ZuperAPP-basic.template.json
