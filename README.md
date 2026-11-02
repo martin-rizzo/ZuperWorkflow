@@ -10,10 +10,14 @@
     <img alt="Platform" src="https://img.shields.io/badge/platform-ComfyUI-0077B6">
   </a>
   <a href="https://huggingface.co/Tongyi-MAI/Z-Image-Turbo" target="_blank">
-    <img alt="Model"    src="https://img.shields.io/badge/model-Z--Image%20Turbo-FF6B6B">
+    <img alt="Model" src="https://img.shields.io/badge/model-Z--Image%20Turbo-FF6B6B">
   </a>
-  <img alt="License"  src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflow?color=11D">
-  <img alt="Last"     src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">
+    <img alt="License" src="https://img.shields.io/github/license/martin-rizzo/ZuperWorkflow?color=11D">
+  </a>
+  <a href="https://github.com/martin-rizzo/ZuperWorkflow/commits/master/" target="_blank">
+    <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflow">
+  </a>
 </p>
 
 **Zuper Workflow** is a workflow designed for [ComfyUI](https://github.com/comfyanonymous/ComfyUI), leveraging
