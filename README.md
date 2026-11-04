@@ -13,7 +13,7 @@
 <a href="https://github.com/martin-rizzo/ZuperWorkflows/commits/master/" target="_blank">
   <img alt="Last" src="https://img.shields.io/github/last-commit/martin-rizzo/ZuperWorkflows?style=flat-square">
 </a>
-<img src="xtra/zuper-workflows-screenshot.jpg" width="90%"></img>
+<img src="assets/zuper-workflows-screenshot.jpg" width="90%"></img>
 
 </div>
 
