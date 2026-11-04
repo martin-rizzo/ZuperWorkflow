@@ -110,23 +110,27 @@ offering a balance between simplicity and advanced customization.
 ```
 ├── LICENSE                   # License file
 ├── README.md                 # This file
-├── zmake.py                  # Core workflow generation script
-├── zmake.sh                  # Shell wrapper for zmake.py
-├── ZuperAPP-basic.json       # Final generated basic comfyui-application
 ├── ZuperAPP-advanced.json    # Final generated advanced comfyui-application
-├── ZuperWF-basic.json        # Final generated basic workflow
+├── ZuperAPP-basic.json       # Final generated basic comfyui-application
 ├── ZuperWF-advanced.json     # Final generated advanced workflow
-└── src/
-    ├── about.md                        # About section for workflow internal documentation
-    ├── requirements.md                 # Requirements section for workflow internal documentation
-    ├── readme-basic.md                 # README content for the BASE workflows
-    ├── readme-advanced.md              # README content for the ADVANCED workflows
-    ├── STYLES.sty.txt                  # Unified styles file with segments for each diffusion stage
-    ├── zmakefile.txt                   # Build configuration file
-    ├── ZuperAPP-basic.template.json    # Template for building the BASIC version of the application
-    ├── ZuperAPP-advanced.template.json # Template for building the ADVANCED version of the application
-    ├── ZuperWF-basic.template.json     # Template for building the BASIC version of the workflow
-    └── ZuperWF-advanced.template.json  # Template for building the ADVANCED version of the workflow
+├── ZuperWF-basic.json        # Final generated basic workflow
+├── ZWF-README.txt            # Plain text README included in the final .zip with the workflows
+├── src/
+│   ├── about.md                        # About section for workflow internal documentation
+│   ├── readme-advanced.md              # README content for the ADVANCED workflows
+│   ├── readme-basic.md                 # README content for the BASE workflows
+│   ├── requirements.md                 # Requirements section for workflow internal documentation
+│   ├── STYLES.sty.txt                  # Unified styles file with segments for each diffusion stage
+│   ├── zmakefile.txt                   # Build configuration file
+│   ├── ZuperAPP-advanced.template.json # Template for building the ADVANCED version of the application
+│   ├── ZuperAPP-basic.template.json    # Template for building the BASIC version of the application
+│   ├── ZuperWF-advanced.template.json  # Template for building the ADVANCED version of the workflow
+│   └── ZuperWF-basic.template.json     # Template for building the BASIC version of the workflow
+└── scripts/
+    ├── filter_segment.py               # Experimental script used during development
+    ├── filter_segment.sh               # Shell wrapper for filter_segment.py
+    ├── zmake.py                        # Core workflow generation script
+    └── zmake.sh                        # Shell wrapper for zmake.py
 ```
 
 
