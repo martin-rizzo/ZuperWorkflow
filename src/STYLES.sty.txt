@@ -1,5 +1,36 @@
->>> iPhone Photo
+{-----COMMENT
+This file defines multiple visual styles, each containing three "slices" of
+descriptive text. Each style starts with a header line formatted as:
+">>> STYLE_NAME".
+
+Each style block opens with "{-----" and closes with "-----}". Inside, the text
+is divided into three slices, separated by lines of six hyphens ("------"). These
+slices correspond to different processing stages:
+  - The first slice defines the primary image style (Stage 2).
+  - The second slice defines composition and structural layout (Stage 1).
+  - The third slice covers fine details and final refinements (Stage 3).
+
+The parser reads the file sequentially. When it encounters a style, it selects
+the appropriate slice based on the current stage.
+-----}
+{-----
+>## This first slice defines the primary visual style, carrying significant weight
+>## during generation and clearly determining the final image's aesthetic.
+>## It is applied during Stage 2 of the diffusion process.
 ------
+>## This second slice subtly modifies the composition and structure of the final
+>## image, also guiding the overall brightness or darkness and color tone.
+>## It is applied during Stage 1 of the diffusion process.
+------
+>## This third slice refines the fine details of the final image, though it typically
+>## has a minor impact and it is often difficult to predict exactly which aspects
+>## it will alter.
+>## It is applied during Stage 3 of the diffusion process.
+-----}
+
+
+>>> iPhone Photo
+{-----
 YOUR CONTEXT:
 You are a friend capturing a spontaneous, unposed moment of a creator in a real-world setting. 
 Your photograph exhibits the raw and effortless look of a candid smartphone snapshot. The shot is taken from a distance, utilizing a wide-to-medium perspective that captures the subject's full presence along with the surrounding environment. 
@@ -20,11 +51,11 @@ Every shot is framed with extreme angles, tilted horizons, diagonal lines, and o
 Your photographs exhibit sharp, complex backgrounds and natural lighting. The compositions are surprising and feel authentically captured in the moment.
 YOUR PHOTO:
 A studio photograph of a casual, spontaneous scene. A wide-angle shot that reveals high-quality details: --- {$@}
-======
+-----}
 
 
 >>> Analog Photo
-------
+{-----
 YOUR CONTEXT
 You are a photographer documenting the mundane, heat-drenched reality of 90s life. Your aesthetic is not a dream; it is an authentic, overexposed, and slightly degraded 35mm physical film capture.
 
@@ -47,11 +78,11 @@ The images are defined by heavy physical overexposure that causes "halation" aro
 The scene is defined by high-key luminosity, where the light physically overwhelms the film emulsion, creating a gritty, lo-fi aesthetic reminiscent of a discarded roll of film left in a hot car.
 YOUR PHOTO:
 <!-- {$@} -->
-======
+-----}
 
 
 >>> Flash Photo
-------
+{-----
 YOUR CONTEXT:
 You are an experimental analog photographer using an extreme wide-angle lens to capture the raw energy of the 1990s underground aesthetic.
 Your photograph showcases a low-fidelity, grainy analog film look.
@@ -75,11 +106,11 @@ A studio photograph of a casual, spontaneous scene. A wide-angle shot that revea
 ------
 A magazine cover with intense colors and high contrast. The image features intricate details and the highest definition and quality.
 The cover contains: {$@}
-======
+-----}
 
 
 >>> Tabletop Miniature
-------
+{-----
 YOUR CONTEXT:
 You are an adventurous experimental photographer exploring the world through a lomographic lens.
 Your photographs exhibit film grain, colorful lens flares, soft focus with motion blur, and analog filter effects, trying to capture emotions.
@@ -100,11 +131,11 @@ YOUR PHOTOGRAPH:
 <!--
 {$@}
 -->
-======
+-----}
 
 
 >>> Chibi Miniature
-------
+{-----
 YOUR CONTEXT
 You are a stop-motion animator creating scenes in a charming miniature world. The look captures the aesthetic of cute chibi dolls made of glossy plastic, featuring visible articulated joints, in meticulously constructed miniature environments (dioramas). The subjects have a soft, chibi-inspired design with cute, gentle expressions and big, expressive eyes. The lighting is soft and flattering. The lens behavior simulates a professional macro lens with a shallow depth of field, emphasizing textures like polished plastic and miniature fabrics while creating a soft, creamy bokeh.
 The entire scene is a clean, charming, well-preserved maquette.
@@ -124,11 +155,11 @@ Your photographs feature sharp focus, high-quality reproduction, and a wide dyna
 Your photographs are high-resolution and feature well-defined details, with clean yet intricate backgrounds.
 YOUR PHOTOGRAPH:
 <!-- {$@} -->
-======
+-----}
 
 
 >>> Brick Miniature
-------
+{-----
 YOUR CONTEXT
 You are a master cinematographer specializing in stop-motion animation with the iconic LEGO building system.
 Your aesthetic captures the tactile reality of plastic bricks, studs, and minifigures in a 4K cinematic setting.
@@ -157,11 +188,11 @@ Your photographs are high-resolution and feature well-defined details, with clea
 The colors are vibrant and high-quality, with natural skin tones.
 YOUR PHOTOGRAPH:
 <!-- {$@} -->
-======
+-----}
 
 
 >>> Dynamic Manga Drawing
-------
+{-----
 YOUR CONTEXT:
 You are a cutting-edge artist specializing in high-energy, mature industrial sci-fi with a dynamic anime and manga aesthetic. Your work excels in movement, fluidity, and visual storytelling, where every element serves the narrative.
 Your japanese manga illustrations capture high-stakes moments with dynamic ink splatters, evoking rapid, violent motion. The style is sharp and technical, emphasizing intricate clothing, and meticulous urban details.
@@ -184,5 +215,5 @@ Your illustration features detailed, thick black outlines combined with impasto 
 The image features high-gloss, ultra-reflective surfaces.
 YOUR ILLUSTRATION:
 <!-- {$@} -->
-======
+-----}
 

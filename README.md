@@ -127,8 +127,8 @@ offering a balance between simplicity and advanced customization.
 │   ├── ZuperWF-advanced.template.json  # Template for building the ADVANCED version of the workflow
 │   └── ZuperWF-basic.template.json     # Template for building the BASIC version of the workflow
 └── scripts/
-    ├── filter_segment.py               # Experimental script used during development
-    ├── filter_segment.sh               # Shell wrapper for filter_segment.py
+    ├── print_slice.py                  # Experimental script used during development
+    ├── print_slice.sh                  # Shell wrapper for print_slice.py
     ├── zmake.py                        # Core workflow generation script
     └── zmake.sh                        # Shell wrapper for zmake.py
 ```
